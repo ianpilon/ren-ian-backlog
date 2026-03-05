@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ren & Ian — Backlog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        h1 .emoji {
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+        }
+        
+        .last-updated {
+            color: #71717a;
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+        
+        .board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .column {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 400px;
+        }
+        
+        .column-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .column-header h2 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .count {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #a1a1aa;
+        }
+        
+        .backlog .column-header { border-bottom-color: #f59e0b; }
+        .in-progress .column-header { border-bottom-color: #3b82f6; }
+        .done .column-header { border-bottom-color: #10b981; }
+        
+        .tasks {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .task {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 14px;
+            border-left: 3px solid transparent;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .task:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .backlog .task { border-left-color: #f59e0b; }
+        .in-progress .task { border-left-color: #3b82f6; }
+        .done .task { border-left-color: #10b981; }
+        
+        .task-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        
+        .task-description {
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        .task-meta {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #d4d4d8;
+        }
+        
+        .tag.priority-high { background: rgba(239, 68, 68, 0.3); color: #fca5a5; }
+        .tag.priority-medium { background: rgba(245, 158, 11, 0.3); color: #fcd34d; }
+        .tag.priority-low { background: rgba(34, 197, 94, 0.3); color: #86efac; }
+        
+        .date {
+            color: #71717a;
+            font-size: 0.75rem;
+        }
+        
+        .empty {
+            color: #52525b;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #52525b;
+            font-size: 0.8rem;
+        }
+        
+        footer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="emoji">🐋</span> Ren & Ian — Backlog</h1>
+        <p class="subtitle">Things we've discussed but haven't tackled yet</p>
+        <p class="last-updated" id="lastUpdated"></p>
+    </header>
+    
+    <div class="board">
+        <div class="column backlog">
+            <div class="column-header">
+                <h2>📋 Backlog</h2>
+                <span class="count" id="backlog-count">0</span>
+            </div>
+            <div class="tasks" id="backlog-tasks"></div>
+        </div>
+        
+        <div class="column in-progress">
+            <div class="column-header">
+                <h2>🔄 In Progress</h2>
+                <span class="count" id="in-progress-count">0</span>
+            </div>
+            <div class="tasks" id="in-progress-tasks"></div>
+        </div>
+        
+        <div class="column done">
+            <div class="column-header">
+                <h2>✅ Done</h2>
+                <span class="count" id="done-count">0</span>
+            </div>
+            <div class="tasks" id="done-tasks"></div>
+        </div>
+    </div>
+    
+    <footer>
+        Maintained by Ren 🐋 · <a href="https://github.com/ianpilon">GitHub</a>
+    </footer>
+    
+    <script>
+        async function loadTasks() {
+            try {
+                const response = await fetch('tasks.json?' + Date.now());
+                const data = await response.json();
+                renderBoard(data);
+            } catch (error) {
+                console.error('Failed to load tasks:', error);
+                document.getElementById('backlog-tasks').innerHTML = 
+                    '<p class="empty">Failed to load tasks</p>';
+            }
+        }
+        
+        function renderBoard(data) {
+            // Update last updated
+            if (data.lastUpdated) {
+                const date = new Date(data.lastUpdated);
+                document.getElementById('lastUpdated').textContent = 
+                    `Last updated: ${date.toLocaleDateString()} at ${date.toLocaleTimeString()}`;
+            }
+            
+            // Render each column
+            renderColumn('backlog', data.backlog || []);
+            renderColumn('in-progress', data.inProgress || []);
+            renderColumn('done', data.done || []);
+        }
+        
+        function renderColumn(columnId, tasks) {
+            const container = document.getElementById(`${columnId}-tasks`);
+            const countEl = document.getElementById(`${columnId}-count`);
+            
+            countEl.textContent = tasks.length;
+            
+            if (tasks.length === 0) {
+                container.innerHTML = '<p class="empty">No items</p>';
+                return;
+            }
+            
+            container.innerHTML = tasks.map(task => `
+                <div class="task">
+                    <div class="task-title">${escapeHtml(task.title)}</div>
+                    ${task.description ? `<div class="task-description">${escapeHtml(task.description)}</div>` : ''}
+                    <div class="task-meta">
+                        ${task.priority ? `<span class="tag priority-${task.priority}">${task.priority}</span>` : ''}
+                        ${(task.tags || []).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
+                        ${task.added ? `<span class="date">Added: ${task.added}</span>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Load tasks on page load
+        loadTasks();
+        
+        // Auto-refresh every 5 minutes
+        setInterval(loadTasks, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

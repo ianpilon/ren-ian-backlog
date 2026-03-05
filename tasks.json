@@ -1,0 +1,88 @@
+{
+  "lastUpdated": "2026-03-05T10:05:00-05:00",
+  "backlog": [
+    {
+      "id": "prepaid-visa",
+      "title": "Prepaid Visa App/Link",
+      "description": "Ian mentioned sharing a prepaid Visa link/app but I couldn't find it in memory. Need to re-share and log properly.",
+      "priority": "medium",
+      "tags": ["finance", "tools"],
+      "added": "2026-03-03"
+    },
+    {
+      "id": "voice-call-fix",
+      "title": "Fix Voice Call Setup",
+      "description": "Options: (1) Upgrade Vapi for international calls, (2) Get Canadian Vapi number, (3) Fix Twilio/ngrok tunnel, (4) Keep using inbound Vapi calls",
+      "priority": "medium",
+      "tags": ["voice", "infrastructure"],
+      "added": "2026-03-03"
+    },
+    {
+      "id": "mou-review",
+      "title": "Review Ontario MOU Brief",
+      "description": "Research completed at research/ontario-mou-venture-studio-brief.md — needs Ian's review for venture studio planning",
+      "priority": "high",
+      "tags": ["venture-studio", "legal"],
+      "added": "2026-03-03"
+    },
+    {
+      "id": "qmd-integration",
+      "title": "Evaluate QMD for OpenOrca",
+      "description": "Tobi Lütke's hybrid search engine (BM25 + vector + LLM re-ranking). MCP-native. Deep dive at research/qmd-deep-dive.md",
+      "priority": "low",
+      "tags": ["openorca", "research"],
+      "added": "2026-03-03"
+    },
+    {
+      "id": "email-smtp",
+      "title": "Set Up Real Email Sending",
+      "description": "Nodemailer works with Ethereal (test). Need real SMTP: Gmail App Password, ProtonMail Bridge ($5/mo), or Resend/SendGrid API",
+      "priority": "low",
+      "tags": ["email", "infrastructure"],
+      "added": "2026-03-02"
+    },
+    {
+      "id": "michael-levin-podcast",
+      "title": "Michael Levin Podcast Prep",
+      "description": "Ian planning podcast with Michael Levin on YouTube channel. Offer to help with talking points when ready.",
+      "priority": "low",
+      "tags": ["podcast", "youtube"],
+      "added": "2026-03-02"
+    }
+  ],
+  "inProgress": [],
+  "done": [
+    {
+      "id": "ontario-mou-research",
+      "title": "Ontario MOU Research",
+      "description": "Comprehensive brief on MOUs for venture studio. Non-binding but courts look at substance. Template included.",
+      "tags": ["venture-studio", "legal"],
+      "added": "2026-03-02",
+      "completed": "2026-03-03"
+    },
+    {
+      "id": "qmd-research",
+      "title": "QMD Deep Dive",
+      "description": "Research on tobi/qmd — Shopify founder's local hybrid search engine",
+      "tags": ["research", "openorca"],
+      "added": "2026-03-02",
+      "completed": "2026-03-03"
+    },
+    {
+      "id": "vapi-setup",
+      "title": "Vapi Account & Voice-Ren",
+      "description": "Created Vapi account, Voice-Ren assistant with phone number +1 (858) 564-4347, tool server for workspace access",
+      "tags": ["voice", "milestone"],
+      "added": "2026-03-02",
+      "completed": "2026-03-02"
+    },
+    {
+      "id": "memory-graph",
+      "title": "Memory Graph Visualization",
+      "description": "Visualized memory as knowledge graph using GitNexus + md-to-js converter. 59 nodes, 502 edges.",
+      "tags": ["memory", "milestone"],
+      "added": "2026-03-02",
+      "completed": "2026-03-02"
+    }
+  ]
+}
