@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-03-05T11:18:00-05:00",
+  "lastUpdated": "2026-03-05T11:25:00-05:00",
   "backlog": [
+    {
+      "id": "cynefin-escalation",
+      "title": "OpenOrca: Cynefin-Based Human Escalation",
+      "description": "Agents need domain awareness — ability to classify situations and know when to escalate to humans. Clear domain = handle autonomously. Complex/Chaotic = ping human, raise flag, don't decide alone.",
+      "priority": "high",
+      "tags": ["openorca", "architecture", "human-in-loop"],
+      "added": "2026-03-05",
+      "link": "https://www.linkedin.com/pulse/cynefin-framework-lens-where-machines-work-best-why-kmbze/",
+      "links": [
+        {"label": "Cynefin Article", "url": "https://www.linkedin.com/pulse/cynefin-framework-lens-where-machines-work-best-why-kmbze/"},
+        {"label": "Cynefin Wiki", "url": "https://en.wikipedia.org/wiki/Cynefin_framework"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "Ian shared LinkedIn article on Cynefin framework — maps where machines excel vs where humans are essential."},
+        {"date": "2026-03-05", "text": "Clear domain: agents handle autonomously (rules, automation). Complicated: agents assist, humans decide. Complex/Chaotic: agents must escalate to humans."},
+        {"date": "2026-03-05", "text": "Ian's direction: 'I need the agents to know when to ping a human or raise a flag for a human.' This is a core OpenOrca design principle."},
+        {"date": "2026-03-05", "text": "Design questions: How does an agent detect which domain it's in? What signals indicate complexity/chaos? What's the escalation protocol?"}
+      ]
+    },
     {
       "id": "headroom-research",
       "title": "Research: Headroom (Context Optimization)",
