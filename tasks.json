@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-03-05T11:32:00-05:00",
+  "lastUpdated": "2026-03-05T11:36:00-05:00",
   "backlog": [
+    {
+      "id": "linkedin-outreach-agent",
+      "title": "LinkedIn Outreach Agent",
+      "description": "Agent that scans LinkedIn network, identifies people with authority/decision-making power, and sends personalized outreach messages. Goal: book 20-min conversations about AI agents.",
+      "priority": "high",
+      "tags": ["automation", "linkedin", "outreach", "sales"],
+      "added": "2026-03-05",
+      "screenshot": "images/linkedin-outreach-example.jpg",
+      "screenshotCaption": "Example outreach message to Director of Product Dev at Molex",
+      "notes": [
+        {"date": "2026-03-05", "text": "Ian needs an agent to run through his LinkedIn and find people with authority, then send personalized messages."},
+        {"date": "2026-03-05", "text": "Message template: Intro (18 months in AI agents, communities, hackathons, real deployments) → Value prop (AI agents agency, reaching out to people in position to act) → CTA (20-min conversation, no pitch)."},
+        {"date": "2026-03-05", "text": "Target: Directors, VPs, C-suite who might be evaluating where agents could save time/money or have hit walls trying."}
+      ]
+    },
     {
       "id": "clawx-install",
       "title": "Install ClawX on Beeline (24/7 Social Monitoring)",

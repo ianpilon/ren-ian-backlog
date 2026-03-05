@@ -222,6 +222,31 @@
             margin-right: 6px;
         }
         
+        .task-screenshot {
+            margin-top: 10px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .task-screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .task-screenshot img:hover {
+            opacity: 0.9;
+        }
+        
+        .task-screenshot-caption {
+            font-size: 0.75rem;
+            color: #71717a;
+            padding: 6px 0;
+            font-style: italic;
+        }
+        
         footer {
             text-align: center;
             margin-top: 40px;
@@ -319,6 +344,14 @@
                     ${task.links && task.links.length > 0 ? `
                         <div class="task-links">
                             ${task.links.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" class="resource-link">📎 ${escapeHtml(link.label)}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                    ${task.screenshot ? `
+                        <div class="task-screenshot">
+                            <a href="${escapeHtml(task.screenshot)}" target="_blank">
+                                <img src="${escapeHtml(task.screenshot)}" alt="Screenshot" loading="lazy">
+                            </a>
+                            ${task.screenshotCaption ? `<div class="task-screenshot-caption">${escapeHtml(task.screenshotCaption)}</div>` : ''}
                         </div>
                     ` : ''}
                     ${task.notes && task.notes.length > 0 ? `
