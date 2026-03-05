@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-03-05T10:05:00-05:00",
+  "lastUpdated": "2026-03-05T10:30:00-05:00",
   "backlog": [
+    {
+      "id": "headroom-research",
+      "title": "Research: Headroom (Context Optimization)",
+      "description": "Context compression layer for LLM apps. 70-95% token reduction on tool outputs. Includes 'failure learning' that analyzes past sessions and writes learnings to CLAUDE.md/MEMORY.md. Could be huge for OpenOrca context management.",
+      "priority": "high",
+      "tags": ["openorca", "research", "optimization"],
+      "added": "2026-03-05",
+      "link": "https://github.com/chopratejas/headroom"
+    },
     {
       "id": "prepaid-visa",
       "title": "Prepaid Visa App/Link",
