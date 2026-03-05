@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2026-03-05T17:03:00-05:00",
+  "lastUpdated": "2026-03-05T18:47:00-05:00",
   "backlog": [
+    {
+      "id": "fractals-agent-orchestrator",
+      "title": "Fractals: Recursive Agent Swarm Orchestrator",
+      "description": "TinyAGI's recursive task orchestrator. Give it any high-level task → grows self-similar tree of subtasks → runs each leaf in isolated git worktrees with agent swarm. Two-phase: Plan then Execute.",
+      "priority": "high",
+      "tags": ["openorca", "research", "orchestration", "agent-swarm"],
+      "added": "2026-03-05",
+      "link": "https://github.com/TinyAGI/fractals",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/TinyAGI/fractals"},
+        {"label": "Discord", "url": "https://discord.gg/jH6AcEChuD"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "Architecture: OpenAI (gpt-5.2) for classify/decompose, Claude CLI for execution in isolated git worktrees."},
+        {"date": "2026-03-05", "text": "Two-phase flow: 1) PLAN - recursive decomposition into tree, 2) EXECUTE - batch leaf tasks in worktrees."},
+        {"date": "2026-03-05", "text": "Batch strategies: depth-first (implemented), breadth-first (roadmap), layer-sequential (roadmap)."},
+        {"date": "2026-03-05", "text": "Web UI: Task input → Tree visualization → Workspace setup → Execution status polling."},
+        {"date": "2026-03-05", "text": "DIRECTLY RELEVANT TO OPENORCA - similar vision of recursive multi-agent orchestration with task decomposition."}
+      ]
+    },
     {
       "id": "ai-system-prompts-collection",
       "title": "System Prompts & Models of AI Tools (30,000+ lines)",
