@@ -1,14 +1,18 @@
 {
-  "lastUpdated": "2026-03-05T10:30:00-05:00",
+  "lastUpdated": "2026-03-05T11:10:00-05:00",
   "backlog": [
     {
       "id": "headroom-research",
       "title": "Research: Headroom (Context Optimization)",
-      "description": "Context compression layer for LLM apps. 70-95% token reduction on tool outputs. Includes 'failure learning' that analyzes past sessions and writes learnings to CLAUDE.md/MEMORY.md. Could be huge for OpenOrca context management.",
+      "description": "Context compression layer for LLM apps. 70-95% token reduction on tool outputs. Includes 'failure learning' that analyzes past sessions and writes learnings to CLAUDE.md/MEMORY.md.",
       "priority": "high",
       "tags": ["openorca", "research", "optimization"],
       "added": "2026-03-05",
-      "link": "https://github.com/chopratejas/headroom"
+      "link": "https://github.com/chopratejas/headroom",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/chopratejas/headroom"},
+        {"label": "Docs", "url": "https://chopratejas.github.io/headroom/"}
+      ]
     },
     {
       "id": "prepaid-visa",
@@ -24,23 +28,33 @@
       "description": "Options: (1) Upgrade Vapi for international calls, (2) Get Canadian Vapi number, (3) Fix Twilio/ngrok tunnel, (4) Keep using inbound Vapi calls",
       "priority": "medium",
       "tags": ["voice", "infrastructure"],
-      "added": "2026-03-03"
+      "added": "2026-03-03",
+      "links": [
+        {"label": "Vapi Dashboard", "url": "https://dashboard.vapi.ai/"}
+      ]
     },
     {
       "id": "mou-review",
       "title": "Review Ontario MOU Brief",
-      "description": "Research completed at research/ontario-mou-venture-studio-brief.md — needs Ian's review for venture studio planning",
+      "description": "Research completed — needs Ian's review for venture studio planning",
       "priority": "high",
       "tags": ["venture-studio", "legal"],
-      "added": "2026-03-03"
+      "added": "2026-03-03",
+      "links": [
+        {"label": "MOU Brief (local)", "url": "https://github.com/ianpilon/ren-ian-backlog/blob/master/research/ontario-mou-venture-studio-brief.md"}
+      ]
     },
     {
       "id": "qmd-integration",
       "title": "Evaluate QMD for OpenOrca",
-      "description": "Tobi Lütke's hybrid search engine (BM25 + vector + LLM re-ranking). MCP-native. Deep dive at research/qmd-deep-dive.md",
+      "description": "Tobi Lütke's hybrid search engine (BM25 + vector + LLM re-ranking). MCP-native.",
       "priority": "low",
       "tags": ["openorca", "research"],
-      "added": "2026-03-03"
+      "added": "2026-03-03",
+      "link": "https://github.com/tobi/qmd",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/tobi/qmd"}
+      ]
     },
     {
       "id": "email-smtp",
@@ -75,7 +89,8 @@
       "description": "Research on tobi/qmd — Shopify founder's local hybrid search engine",
       "tags": ["research", "openorca"],
       "added": "2026-03-02",
-      "completed": "2026-03-03"
+      "completed": "2026-03-03",
+      "link": "https://github.com/tobi/qmd"
     },
     {
       "id": "vapi-setup",
@@ -83,7 +98,10 @@
       "description": "Created Vapi account, Voice-Ren assistant with phone number +1 (858) 564-4347, tool server for workspace access",
       "tags": ["voice", "milestone"],
       "added": "2026-03-02",
-      "completed": "2026-03-02"
+      "completed": "2026-03-02",
+      "links": [
+        {"label": "Vapi Dashboard", "url": "https://dashboard.vapi.ai/"}
+      ]
     },
     {
       "id": "memory-graph",
@@ -91,7 +109,10 @@
       "description": "Visualized memory as knowledge graph using GitNexus + md-to-js converter. 59 nodes, 502 edges.",
       "tags": ["memory", "milestone"],
       "added": "2026-03-02",
-      "completed": "2026-03-02"
+      "completed": "2026-03-02",
+      "links": [
+        {"label": "GitNexus", "url": "https://gitnexus.vercel.app"}
+      ]
     }
   ]
 }
