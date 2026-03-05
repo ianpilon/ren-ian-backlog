@@ -1,6 +1,18 @@
 {
-  "lastUpdated": "2026-03-05T16:07:00-05:00",
+  "lastUpdated": "2026-03-05T16:53:00-05:00",
   "backlog": [
+    {
+      "id": "bookmark-tweet-2029339145114374256",
+      "title": "Bookmarked Tweet",
+      "description": "Tweet bookmarked by Ian — couldn't fetch content directly from X. Check link for details.",
+      "priority": "medium",
+      "tags": ["bookmark", "twitter"],
+      "added": "2026-03-05",
+      "link": "https://x.com/i/status/2029339145114374256",
+      "notes": [
+        {"date": "2026-03-05", "text": "Ian said 'Bookmark this' — X blocked direct fetch. Need to review manually or get context from Ian."}
+      ]
+    },
     {
       "id": "gitnexus-research",
       "title": "Research: GitNexus (Code Knowledge Graph + MCP)",
