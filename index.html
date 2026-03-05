@@ -188,6 +188,40 @@
             color: #c4b5fd;
         }
         
+        .task-notes {
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .task-notes summary {
+            cursor: pointer;
+            color: #a1a1aa;
+            padding: 4px 0;
+            user-select: none;
+        }
+        
+        .task-notes summary:hover {
+            color: #d4d4d8;
+        }
+        
+        .task-notes ul {
+            margin-top: 8px;
+            padding-left: 16px;
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .task-notes li {
+            margin-bottom: 8px;
+            color: #a1a1aa;
+            line-height: 1.4;
+        }
+        
+        .note-date {
+            color: #71717a;
+            font-size: 0.75rem;
+            margin-right: 6px;
+        }
+        
         footer {
             text-align: center;
             margin-top: 40px;
@@ -286,6 +320,14 @@
                         <div class="task-links">
                             ${task.links.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" class="resource-link">📎 ${escapeHtml(link.label)}</a>`).join('')}
                         </div>
+                    ` : ''}
+                    ${task.notes && task.notes.length > 0 ? `
+                        <details class="task-notes">
+                            <summary>💬 Conversation Notes (${task.notes.length})</summary>
+                            <ul>
+                                ${task.notes.map(note => `<li><span class="note-date">${escapeHtml(note.date)}</span> ${escapeHtml(note.text)}</li>`).join('')}
+                            </ul>
+                        </details>
                     ` : ''}
                     <div class="task-meta">
                         ${task.priority ? `<span class="tag priority-${task.priority}">${task.priority}</span>` : ''}

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T11:10:00-05:00",
+  "lastUpdated": "2026-03-05T11:15:00-05:00",
   "backlog": [
     {
       "id": "headroom-research",
@@ -12,6 +12,10 @@
       "links": [
         {"label": "GitHub Repo", "url": "https://github.com/chopratejas/headroom"},
         {"label": "Docs", "url": "https://chopratejas.github.io/headroom/"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "Ian shared this right after we built the Kanban board. Marked high priority for OpenOrca context management."},
+        {"date": "2026-03-05", "text": "Key features: proxy mode (zero code changes), failure learning (analyzes past Claude sessions), 87.6% token savings with same accuracy in benchmarks."}
       ]
     },
     {
@@ -20,7 +24,11 @@
       "description": "Ian mentioned sharing a prepaid Visa link/app but I couldn't find it in memory. Need to re-share and log properly.",
       "priority": "medium",
       "tags": ["finance", "tools"],
-      "added": "2026-03-03"
+      "added": "2026-03-03",
+      "notes": [
+        {"date": "2026-03-03", "text": "Ian asked if I remembered a prepaid Visa link he shared previously. Searched all memory files and workspace but couldn't find it."},
+        {"date": "2026-03-03", "text": "Might have been shared before memory system was fully set up, or didn't get logged. Ian to re-share when ready."}
+      ]
     },
     {
       "id": "voice-call-fix",
@@ -31,6 +39,11 @@
       "added": "2026-03-03",
       "links": [
         {"label": "Vapi Dashboard", "url": "https://dashboard.vapi.ai/"}
+      ],
+      "notes": [
+        {"date": "2026-03-03", "text": "Ian asked me to call him with overnight briefing. Twilio call failed — ngrok tunnel was stale."},
+        {"date": "2026-03-03", "text": "Ian suggested using Vapi instead (we set it up Mar 2). Tried but Vapi free tier blocks 'international' calls — Canada counts as international from US number."},
+        {"date": "2026-03-03", "text": "Workaround for now: Ian calls the Vapi number (+1 858 564 4347) inbound. Works great that way."}
       ]
     },
     {
@@ -40,8 +53,9 @@
       "priority": "high",
       "tags": ["venture-studio", "legal"],
       "added": "2026-03-03",
-      "links": [
-        {"label": "MOU Brief (local)", "url": "https://github.com/ianpilon/ren-ian-backlog/blob/master/research/ontario-mou-venture-studio-brief.md"}
+      "notes": [
+        {"date": "2026-03-02", "text": "Ian added to overnight elves queue: research Ontario MOU requirements for venture studio structure."},
+        {"date": "2026-03-03", "text": "Completed overnight. Key finding: MOUs in Ontario generally non-binding, but courts look at substance over labels. Included template and recommendation to use non-binding MOU for exploration, then formal Founder Agreement when ready."}
       ]
     },
     {
@@ -54,6 +68,10 @@
       "link": "https://github.com/tobi/qmd",
       "links": [
         {"label": "GitHub Repo", "url": "https://github.com/tobi/qmd"}
+      ],
+      "notes": [
+        {"date": "2026-03-02", "text": "Ian added to overnight queue: research tobi/qmd GitHub repo."},
+        {"date": "2026-03-03", "text": "Deep dive completed. QMD is Shopify founder's local hybrid search — combines BM25 + vector + LLM re-ranking, all on-device. MCP-native design makes it interesting for OpenOrca memory/context retrieval."}
       ]
     },
     {
@@ -62,7 +80,11 @@
       "description": "Nodemailer works with Ethereal (test). Need real SMTP: Gmail App Password, ProtonMail Bridge ($5/mo), or Resend/SendGrid API",
       "priority": "low",
       "tags": ["email", "infrastructure"],
-      "added": "2026-03-02"
+      "added": "2026-03-02",
+      "notes": [
+        {"date": "2026-03-02", "text": "Tried automating ProtonMail web UI but hit sandboxed iframe security restrictions — can set To/Subject but body doesn't persist."},
+        {"date": "2026-03-02", "text": "Nodemailer SMTP works with Ethereal (test service). For real sending need: Gmail App Password (free, quick), ProtonMail Bridge ($5/mo), or Resend/SendGrid API."}
+      ]
     },
     {
       "id": "michael-levin-podcast",
@@ -70,7 +92,11 @@
       "description": "Ian planning podcast with Michael Levin on YouTube channel. Offer to help with talking points when ready.",
       "priority": "low",
       "tags": ["podcast", "youtube"],
-      "added": "2026-03-02"
+      "added": "2026-03-02",
+      "notes": [
+        {"date": "2026-03-02", "text": "Ian mentioned he has a YouTube channel and is planning a podcast with Michael Levin. Still in planning stage."},
+        {"date": "2026-03-02", "text": "Topic likely around agent memory / AI. Offered to help with talking points when ready."}
+      ]
     }
   ],
   "inProgress": [],
@@ -81,7 +107,10 @@
       "description": "Comprehensive brief on MOUs for venture studio. Non-binding but courts look at substance. Template included.",
       "tags": ["venture-studio", "legal"],
       "added": "2026-03-02",
-      "completed": "2026-03-03"
+      "completed": "2026-03-03",
+      "notes": [
+        {"date": "2026-03-03", "text": "Overnight elves completed. Brief at research/ontario-mou-venture-studio-brief.md"}
+      ]
     },
     {
       "id": "qmd-research",
@@ -90,7 +119,10 @@
       "tags": ["research", "openorca"],
       "added": "2026-03-02",
       "completed": "2026-03-03",
-      "link": "https://github.com/tobi/qmd"
+      "link": "https://github.com/tobi/qmd",
+      "notes": [
+        {"date": "2026-03-03", "text": "Overnight elves completed. Deep dive at research/qmd-deep-dive.md"}
+      ]
     },
     {
       "id": "vapi-setup",
@@ -101,6 +133,11 @@
       "completed": "2026-03-02",
       "links": [
         {"label": "Vapi Dashboard", "url": "https://dashboard.vapi.ai/"}
+      ],
+      "notes": [
+        {"date": "2026-03-02", "text": "Voice latency was 3-10 seconds with Twilio setup. Vapi gets it down to ~1150ms."},
+        {"date": "2026-03-02", "text": "Created Voice-Ren assistant with Claude Sonnet, built tool server at vapi-tools/server.js for workspace access."},
+        {"date": "2026-03-02", "text": "Voice-Ren successfully pushed to GitHub via voice command — milestone!"}
       ]
     },
     {
@@ -112,6 +149,10 @@
       "completed": "2026-03-02",
       "links": [
         {"label": "GitNexus", "url": "https://gitnexus.vercel.app"}
+      ],
+      "notes": [
+        {"date": "2026-03-02", "text": "GitNexus is built for code (imports/function calls), not markdown. Created tools/md-to-js.js converter to transform .md files into .js modules with require() calls."},
+        {"date": "2026-03-02", "text": "Result: 59 nodes, 502 edges — my brain visualized as a neural network. Reusable pattern for any document format."}
       ]
     }
   ]
