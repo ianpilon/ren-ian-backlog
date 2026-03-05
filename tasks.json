@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-03-05T11:25:00-05:00",
+  "lastUpdated": "2026-03-05T11:32:00-05:00",
   "backlog": [
+    {
+      "id": "clawx-install",
+      "title": "Install ClawX on Beeline (24/7 Social Monitoring)",
+      "description": "Open source AI research assistant for autonomous social monitoring. Install on Ren's shell (Beeline mini PC) to run 24/7 watching Reddit, X/Twitter, and LinkedIn conversations.",
+      "priority": "high",
+      "tags": ["infrastructure", "social", "monitoring"],
+      "added": "2026-03-05",
+      "link": "https://claw-x.com",
+      "links": [
+        {"label": "ClawX Website", "url": "https://claw-x.com"},
+        {"label": "FAQ", "url": "https://claw-x.com/#faq"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "Ian wants this installed on the Beeline (my physical shell downstairs) to monitor social conversations 24/7."},
+        {"date": "2026-03-05", "text": "Target platforms: Reddit, X/Twitter, LinkedIn."},
+        {"date": "2026-03-05", "text": "ClawX is open source AI research assistant with autonomous data monitoring capabilities."}
+      ]
+    },
     {
       "id": "cynefin-escalation",
       "title": "OpenOrca: Cynefin-Based Human Escalation",
