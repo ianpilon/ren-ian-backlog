@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2026-03-05T11:36:00-05:00",
+  "lastUpdated": "2026-03-05T16:07:00-05:00",
   "backlog": [
+    {
+      "id": "gitnexus-research",
+      "title": "Research: GitNexus (Code Knowledge Graph + MCP)",
+      "description": "Zero-server code intelligence engine. Indexes codebases into knowledge graphs with every dependency, call chain, cluster, and execution flow. MCP integration for Claude Code, Cursor, Windsurf. CLI + Web UI.",
+      "priority": "high",
+      "tags": ["openorca", "research", "knowledge-graph", "mcp"],
+      "added": "2026-03-05",
+      "link": "https://github.com/abhigyanpatwari/GitNexus",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/abhigyanpatwari/GitNexus"},
+        {"label": "Web UI", "url": "https://gitnexus.vercel.app"},
+        {"label": "Discord", "url": "https://discord.gg/AAsRVT6fGb"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "We used GitNexus web UI before to visualize memory as knowledge graph (59 nodes, 502 edges)."},
+        {"date": "2026-03-05", "text": "Full repo has CLI + MCP integration: npm install -g gitnexus, then gitnexus analyze to index a repo."},
+        {"date": "2026-03-05", "text": "MCP gives AI agents deep codebase awareness — supports Claude Code (full: MCP + skills + hooks), Cursor, Windsurf, OpenCode."},
+        {"date": "2026-03-05", "text": "Like DeepWiki but deeper — tracks every relationship, not just descriptions. Could be useful for OpenOrca agent context."}
+      ]
+    },
     {
       "id": "linkedin-outreach-agent",
       "title": "LinkedIn Outreach Agent",
