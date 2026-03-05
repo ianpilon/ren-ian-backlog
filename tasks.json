@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T11:15:00-05:00",
+  "lastUpdated": "2026-03-05T11:18:00-05:00",
   "backlog": [
     {
       "id": "headroom-research",
@@ -19,15 +19,21 @@
       ]
     },
     {
-      "id": "prepaid-visa",
-      "title": "Prepaid Visa App/Link",
-      "description": "Ian mentioned sharing a prepaid Visa link/app but I couldn't find it in memory. Need to re-share and log properly.",
-      "priority": "medium",
-      "tags": ["finance", "tools"],
-      "added": "2026-03-03",
+      "id": "agentcard-research",
+      "title": "Research: AgentCard (Prepaid Visa for AI Agents)",
+      "description": "Virtual Visa cards designed for AI agents. CLI tool with MCP integration for Claude. Single-use cards with scoped spending limits. Free during beta.",
+      "priority": "high",
+      "tags": ["openorca", "research", "payments", "infrastructure"],
+      "added": "2026-03-05",
+      "link": "https://agentcard.sh",
+      "links": [
+        {"label": "Website", "url": "https://agentcard.sh"}
+      ],
       "notes": [
-        {"date": "2026-03-03", "text": "Ian asked if I remembered a prepaid Visa link he shared previously. Searched all memory files and workspace but couldn't find it."},
-        {"date": "2026-03-03", "text": "Might have been shared before memory system was fully set up, or didn't get logged. Ian to re-share when ready."}
+        {"date": "2026-03-03", "text": "Ian originally mentioned a prepaid Visa app but link wasn't in memory. Couldn't find it at the time."},
+        {"date": "2026-03-05", "text": "Ian found the link: agentcard.sh — prepaid virtual Visa cards specifically for AI agents."},
+        {"date": "2026-03-05", "text": "Key features: npm install -g agent-cards, MCP integration (agent-cards setup-mcp), single-use cards locked to loaded amount, AES-256-GCM encryption, works anywhere Visa accepted."},
+        {"date": "2026-03-05", "text": "Highly relevant for OpenOrca — gives agents ability to make real purchases with scoped spending limits per agent/task."}
       ]
     },
     {
@@ -101,6 +107,23 @@
   ],
   "inProgress": [],
   "done": [
+    {
+      "id": "kanban-board",
+      "title": "Kanban Board for Backlog",
+      "description": "Built static Kanban board hosted on GitHub Pages to track discussed-but-not-acted-on items. Includes links and conversation notes.",
+      "tags": ["tooling", "milestone"],
+      "added": "2026-03-05",
+      "completed": "2026-03-05",
+      "link": "https://ianpilon.github.io/ren-ian-backlog/",
+      "links": [
+        {"label": "Live Board", "url": "https://ianpilon.github.io/ren-ian-backlog/"},
+        {"label": "GitHub Repo", "url": "https://github.com/ianpilon/ren-ian-backlog"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "Ian requested after system crash — wanted a way to track things we discussed but haven't acted on yet, so nothing gets lost."},
+        {"date": "2026-03-05", "text": "Built with vanilla HTML/CSS/JS, loads from tasks.json, hosted on GitHub Pages. Auto-refreshes every 5 min."}
+      ]
+    },
     {
       "id": "ontario-mou-research",
       "title": "Ontario MOU Research",
