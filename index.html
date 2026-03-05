@@ -48,6 +48,28 @@
             margin-top: 8px;
         }
         
+        .call-ren {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .call-ren:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+        
+        .call-ren:active {
+            transform: translateY(0);
+        }
+        
         .board {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -264,6 +286,7 @@
     <header>
         <h1><span class="emoji">🐋</span> Ren & Ian — Backlog</h1>
         <p class="subtitle">Things we've discussed but haven't tackled yet</p>
+        <a href="tel:+18585644347" class="call-ren">📞 Call Ren: +1 (858) 564-4347</a>
         <p class="last-updated" id="lastUpdated"></p>
     </header>
     
