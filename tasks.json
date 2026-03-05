@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-03-05T16:53:00-05:00",
+  "lastUpdated": "2026-03-05T17:03:00-05:00",
   "backlog": [
+    {
+      "id": "ai-system-prompts-collection",
+      "title": "System Prompts & Models of AI Tools (30,000+ lines)",
+      "description": "Massive collection of system prompts from: Claude Code, Cursor, Devin, Windsurf, Replit, v0, Lovable, Manus, Perplexity, Warp, Notion AI, and 20+ more. Gold for understanding how top AI tools are built.",
+      "priority": "high",
+      "tags": ["research", "prompts", "reference", "openorca"],
+      "added": "2026-03-05",
+      "link": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"},
+        {"label": "DeepWiki", "url": "https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools"}
+      ],
+      "notes": [
+        {"date": "2026-03-05", "text": "30,000+ lines of system prompts, internal tools, and model configs from major AI tools."},
+        {"date": "2026-03-05", "text": "Includes: Augment Code, Claude Code, Cursor, Devin AI, Junie, Kiro, Lovable, Manus, NotionAI, Perplexity, Replit, Windsurf, v0, and many more."},
+        {"date": "2026-03-05", "text": "Valuable for: understanding agent architectures, prompt engineering patterns, tool design decisions."},
+        {"date": "2026-03-05", "text": "Related: Kilo Code is open-source with full system prompt + architecture visible."}
+      ]
+    },
     {
       "id": "defensibility-moats-essay",
       "title": "The Only Thing That Survives (Defensibility Essay)",
