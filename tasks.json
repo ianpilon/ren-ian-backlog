@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-03-05T18:47:00-05:00",
+  "lastUpdated": "2026-03-06T14:15:00-05:00",
   "backlog": [
+    {
+      "id": "memory-as-reasoning",
+      "title": "Memory as Reasoning (Plastic Labs)",
+      "description": "Treat memory as dynamic reasoning task, not static storage. Humans use prediction & surprisal due to resource constraints — LLMs don't have these limits, so we can exceed human memory performance.",
+      "priority": "high",
+      "tags": ["memory", "research", "podcast-prep", "michael-levin"],
+      "added": "2026-03-06",
+      "link": "https://blog.plasticlabs.ai/blog/Memory-as-Reasoning",
+      "links": [
+        {"label": "Blog Post", "url": "https://blog.plasticlabs.ai/blog/Memory-as-Reasoning"},
+        {"label": "Talk Video", "url": "https://x.com/vintrotweets/status/1950945331178336468"}
+      ],
+      "notes": [
+        {"date": "2026-03-06", "text": "FOR MICHAEL LEVIN PODCAST PREP — concepts about AI agent memory."},
+        {"date": "2026-03-06", "text": "KEY INSIGHT: Memory isn't just storage — it's making predictions from incomplete data + checking for surprisal/errors to improve next predictions."},
+        {"date": "2026-03-06", "text": "Human brains evolved under energy/information/computation constraints → prediction-based memory systems."},
+        {"date": "2026-03-06", "text": "LLMs don't have these constraints → can reason from first principles about social information, form better representations."},
+        {"date": "2026-03-06", "text": "Social cognition: Models of other people are constantly updated based on predictive fidelity or novelty (surprisal)."},
+        {"date": "2026-03-06", "text": "Traditional storage approaches are brittle, deal poorly with contradictions/incomplete info. Dynamic reasoning is better."},
+        {"date": "2026-03-06", "text": "Chain-of-thought prompting ('let's think step by step') increases performance by expending more tokens reasoning."}
+      ]
+    },
     {
       "id": "fractals-agent-orchestrator",
       "title": "Fractals: Recursive Agent Swarm Orchestrator",
