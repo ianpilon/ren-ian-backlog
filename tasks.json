@@ -1,6 +1,46 @@
 {
-  "lastUpdated": "2026-03-07T08:36:00-05:00",
+  "lastUpdated": "2026-03-07T08:42:00-05:00",
   "backlog": [
+    {
+      "id": "agentic-code-reasoning",
+      "title": "Agentic Code Reasoning (Semi-Formal Verification)",
+      "description": "LLM agents can reason about code semantics WITHOUT execution using semi-formal reasoning — structured prompts that require explicit premises, execution traces, and formal conclusions. Acts as a 'certificate' the agent can't fake.",
+      "priority": "high",
+      "tags": ["research", "code-reasoning", "openorca", "verification"],
+      "added": "2026-03-07",
+      "link": "https://arxiv.org/html/2603.01896v2",
+      "links": [
+        {"label": "arXiv Paper", "url": "https://arxiv.org/html/2603.01896v2"}
+      ],
+      "notes": [
+        {"date": "2026-03-07", "text": "KEY INSIGHT: Semi-formal reasoning = structured templates requiring explicit premises + execution traces + formal conclusions. Agent can't skip cases or make unsupported claims."},
+        {"date": "2026-03-07", "text": "Results: 78%→88% accuracy on patch equivalence (curated), 93% on real-world agent-generated patches."},
+        {"date": "2026-03-07", "text": "Applications: RL reward signals without test execution, code review, static analysis, fault localization."},
+        {"date": "2026-03-07", "text": "OPENORCA RELEVANCE: Code review agents that can verify patches without running tests. Execution-free verification for agent-generated code."}
+      ]
+    },
+    {
+      "id": "second-me",
+      "title": "Second-Me: Open Source AI Self Trainer",
+      "description": "Train a personal 'AI self' locally using Hierarchical Memory Modeling (HMM) + Me-Alignment Algorithm. Preserves identity, delivers context, defends interests. Decentralized network for sharing context.",
+      "priority": "high",
+      "tags": ["research", "memory", "identity", "openorca"],
+      "added": "2026-03-07",
+      "link": "https://github.com/mindverse/Second-Me",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/mindverse/Second-Me"},
+        {"label": "Website", "url": "https://home.second.me/"},
+        {"label": "HMM Paper", "url": "https://arxiv.org/abs/2503.08102"},
+        {"label": "Discord", "url": "https://discord.gg/GpWHQNUwrg"}
+      ],
+      "notes": [
+        {"date": "2026-03-07", "text": "Vision: 'Super AI' threatens human independence → Second Me creates AI that amplifies YOU, not erases you."},
+        {"date": "2026-03-07", "text": "Architecture: Hierarchical Memory Modeling (HMM) for capturing identity + Me-Alignment Algorithm for authentic reflection."},
+        {"date": "2026-03-07", "text": "Privacy: 100% local training and hosting — your data, your control."},
+        {"date": "2026-03-07", "text": "Network: Launch AI self onto decentralized network — anyone/any app can connect with permission, sharing your context as digital identity."},
+        {"date": "2026-03-07", "text": "OPENORCA RELEVANCE: Memory architecture patterns, personal AI identity layer, potential integration for user representation."}
+      ]
+    },
     {
       "id": "katrina-schleisman-research",
       "title": "Research: Katrina Schleisman (Podcast Guest)",
