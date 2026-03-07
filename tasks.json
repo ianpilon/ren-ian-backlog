@@ -64,6 +64,29 @@
       ]
     },
     {
+      "id": "gigabrain",
+      "title": "Gigabrain: Long-Term Memory Layer for OpenClaw",
+      "description": "SQLite-backed memory plugin for OpenClaw agents. Capture facts from conversations, dedupe (exact + semantic), native markdown sync (MEMORY.md + daily notes), quality gates, nightly maintenance, web console.",
+      "priority": "high",
+      "tags": ["openclaw", "memory", "plugin", "openorca", "infrastructure"],
+      "added": "2026-03-07",
+      "link": "https://github.com/legendaryvibecoder/gigabrain",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/legendaryvibecoder/gigabrain"}
+      ],
+      "notes": [
+        {"date": "2026-03-07", "text": "DIRECTLY RELEVANT TO MY OPERATION — memory plugin specifically for OpenClaw agents."},
+        {"date": "2026-03-07", "text": "CAPTURE: Extracts structured facts (preferences, decisions, entities, episodes) from conversations → SQLite registry."},
+        {"date": "2026-03-07", "text": "RECALL: Before each prompt, searches registry + native markdown files to inject relevant context."},
+        {"date": "2026-03-07", "text": "DEDUPE: Exact + hybrid semantic deduplication with type-aware thresholds. Auto-merge above 0.92, review queue 0.85-0.92."},
+        {"date": "2026-03-07", "text": "NATIVE SYNC: Indexes workspace MEMORY.md and daily notes alongside registry for unified recall."},
+        {"date": "2026-03-07", "text": "QUALITY GATES: Junk filters, durable-personal retention bias, plausibility heuristics, optional LLM second opinion."},
+        {"date": "2026-03-07", "text": "NIGHTLY MAINTENANCE: snapshot → native_sync → quality_sweep → exact_dedupe → semantic_dedupe → audit_delta → archive_compression → vacuum → metrics_report."},
+        {"date": "2026-03-07", "text": "REQUIRES: Node.js >= 22.x (uses node:sqlite), OpenClaw >= 2026.2.15, optional Ollama for local LLM review."},
+        {"date": "2026-03-07", "text": "SETUP: npm install @legendaryvibecoder/gigabrain, then npm run setup -- --workspace /path/to/workspace"}
+      ]
+    },
+    {
       "id": "sleeping-llm",
       "title": "Sleeping LLM: Biologically-Inspired Memory Consolidation",
       "description": "LLM that forms persistent memories during 'wake' (MEMIT weight edits) and consolidates them during 'sleep' (LoRA transfer). Implements Complementary Learning Systems theory — hippocampus = MEMIT (fast, brittle), neocortex = LoRA (slow, stable).",
