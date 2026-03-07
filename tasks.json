@@ -1,6 +1,18 @@
 {
-  "lastUpdated": "2026-03-06T14:15:00-05:00",
+  "lastUpdated": "2026-03-07T08:36:00-05:00",
   "backlog": [
+    {
+      "id": "katrina-schleisman-research",
+      "title": "Research: Katrina Schleisman (Podcast Guest)",
+      "description": "Katrina Schleisman is joining Ian and Michael Levin on the podcast. Research her background, work, and perspectives to prepare discussion points.",
+      "priority": "high",
+      "tags": ["podcast-prep", "research", "michael-levin"],
+      "added": "2026-03-07",
+      "notes": [
+        {"date": "2026-03-07", "text": "Katrina is co-guest with Michael Levin on Ian's upcoming podcast about AI agent memory."},
+        {"date": "2026-03-07", "text": "Overnight research scheduled for tonight — will include background, key work, and podcast discussion questions."}
+      ]
+    },
     {
       "id": "memory-as-reasoning",
       "title": "Memory as Reasoning (Plastic Labs)",
