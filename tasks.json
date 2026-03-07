@@ -64,6 +64,24 @@
       ]
     },
     {
+      "id": "notebooklm-deep-learning-method",
+      "title": "NotebookLM Deep Learning Method (Podcast Prep)",
+      "description": "Compress a semester of learning into 48 hours. Upload massive corpus → extract mental models → map expert disagreements → generate deep-understanding questions → drill with source material.",
+      "priority": "high",
+      "tags": ["podcast-prep", "method", "michael-levin", "learning"],
+      "added": "2026-03-07",
+      "notes": [
+        {"date": "2026-03-07", "text": "USE THIS BEFORE LEVIN/SCHLEISMAN PODCAST"},
+        {"date": "2026-03-07", "text": "STEP 1: Upload massive corpus — textbooks, research papers, lecture transcripts, everything on the subject."},
+        {"date": "2026-03-07", "text": "STEP 2: Ask 'What are the 5 core mental models that every expert in this field shares?' — Not 'summarize', not 'explain'. Mental models."},
+        {"date": "2026-03-07", "text": "STEP 3: Ask 'Show me the 3 places where experts fundamentally disagree, and what each side's strongest argument is.' — Maps the intellectual landscape in 20 min."},
+        {"date": "2026-03-07", "text": "STEP 4: Ask 'Generate 10 questions that would expose whether someone deeply understands this subject vs someone who just memorized facts.'"},
+        {"date": "2026-03-07", "text": "STEP 5: Spend hours answering those questions using source material. Every wrong answer → 'Explain why this is wrong and what I'm missing.'"},
+        {"date": "2026-03-07", "text": "KEY INSIGHT: The difference between a semester and 48 hours isn't the amount of content — it's knowing which questions to ask."},
+        {"date": "2026-03-07", "text": "SOURCE: MIT grad student passed qualifying exam on subject he'd never studied using this exact method."}
+      ]
+    },
+    {
       "id": "katrina-schleisman-research",
       "title": "Research: Katrina Schleisman (Podcast Guest)",
       "description": "Katrina Schleisman is joining Ian and Michael Levin on the podcast. Research her background, work, and perspectives to prepare discussion points.",
