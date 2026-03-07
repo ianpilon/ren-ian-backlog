@@ -64,6 +64,29 @@
       ]
     },
     {
+      "id": "sleeping-llm",
+      "title": "Sleeping LLM: Biologically-Inspired Memory Consolidation",
+      "description": "LLM that forms persistent memories during 'wake' (MEMIT weight edits) and consolidates them during 'sleep' (LoRA transfer). Implements Complementary Learning Systems theory — hippocampus = MEMIT (fast, brittle), neocortex = LoRA (slow, stable).",
+      "priority": "high",
+      "tags": ["research", "memory", "neuroscience", "podcast-prep", "michael-levin", "openorca"],
+      "added": "2026-03-07",
+      "link": "https://github.com/vbario/sleeping-llm",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/vbario/sleeping-llm"},
+        {"label": "MEMIT Paper", "url": "https://memit.baulab.info/"}
+      ],
+      "notes": [
+        {"date": "2026-03-07", "text": "PERFECT FOR LEVIN PODCAST — implements neuroscience theory in LLMs."},
+        {"date": "2026-03-07", "text": "ARCHITECTURE: Wake = MEMIT weight edits (instant, no retrieval). Sleep = audit degraded memories + LoRA consolidation + MEMIT scale-down."},
+        {"date": "2026-03-07", "text": "NEUROSCIENCE MAPPING: Hippocampal fast encoding → MEMIT. Neocortical consolidation → LoRA. Sleep consolidation → audit+refresh+transfer."},
+        {"date": "2026-03-07", "text": "KEY FINDING: Wake capacity threshold — 8B model sustains 0.92 recall up to 13 edits, then CRASHES to 0.57 at 14. Sharp phase transition, not gradual decay."},
+        {"date": "2026-03-07", "text": "ALIGNMENT TAX: RLHF suppresses LoRA-injected knowledge at scale. Inverse scaling: 3B=47%, 8B=37%, 70B=0% recall. Led them to use LoRA only during sleep."},
+        {"date": "2026-03-07", "text": "SLEEP CONVERGENCE: 30 facts at 40% initial recall recover to 100% within 4 sleep cycles. 70B converges 2x faster."},
+        {"date": "2026-03-07", "text": "UNBOUNDED CAPACITY: Once facts transfer to LoRA, MEMIT edits dissolve — clearing buffer for new memories. Effective lifetime capacity unbounded."},
+        {"date": "2026-03-07", "text": "RUNS ON: MacBook Air M3 8GB (3B 4-bit), Mac Studio M4 Ultra (70B), 2x H100 (8B BF16)."}
+      ]
+    },
+    {
       "id": "notebooklm-deep-learning-method",
       "title": "NotebookLM Deep Learning Method (Podcast Prep)",
       "description": "Compress a semester of learning into 48 hours. Upload massive corpus → extract mental models → map expert disagreements → generate deep-understanding questions → drill with source material.",
