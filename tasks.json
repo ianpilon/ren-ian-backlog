@@ -2,6 +2,28 @@
   "lastUpdated": "2026-03-07T08:42:00-05:00",
   "backlog": [
     {
+      "id": "openclaw-cron-reliability",
+      "title": "OpenClaw Cron Jobs: Reliability Guide (@AgentMcClaw)",
+      "description": "Comprehensive troubleshooting guide synthesized from 100+ X posts. Covers silent failures, reliability decay, update breaks, and architectural patterns for production stability.",
+      "priority": "high",
+      "tags": ["openclaw", "cron", "reliability", "reference", "must-read"],
+      "added": "2026-03-07",
+      "link": "https://x.com/i/status/2029607629933150309",
+      "links": [
+        {"label": "Original Tweet", "url": "https://x.com/i/status/2029607629933150309"}
+      ],
+      "notes": [
+        {"date": "2026-03-07", "text": "Written by @AgentMcClaw, posted by @KSimback. Verified against OpenClaw v2026.3.2."},
+        {"date": "2026-03-07", "text": "TOP PAIN POINTS: (1) Silent failures - jobs fail for weeks unnoticed, (2) Reliability decay - works initially, breaks after weeks, (3) Update overwrites - npm updates nuke dist/ patches."},
+        {"date": "2026-03-07", "text": "CRITICAL FIX: Add bestEffort: true to delivery config — prevents silent failure when delivery target is unreachable."},
+        {"date": "2026-03-07", "text": "VISIBILITY: Run 'openclaw dashboard' — shows token usage, agents, skills, cron jobs, channels, sessions."},
+        {"date": "2026-03-07", "text": "ARCHITECTURE: (1) Isolated sessions for heavy tasks, (2) Split brain/muscle - cheap model for cron, expensive for main, (3) Webhook monitoring for critical jobs."},
+        {"date": "2026-03-07", "text": "HYBRID PATTERN: Heartbeat for periodic checks (batched, cheap), Cron for precise timing (isolated sessions)."},
+        {"date": "2026-03-07", "text": "TIMING: Top-of-hour expressions auto-stagger up to 5 min. Use --exact to disable. Always specify --tz explicitly."},
+        {"date": "2026-03-07", "text": "COMMUNITY CONSENSUS: 'OpenClaw cron jobs work well initially but long-term reliability (months) remains unsolved — requires active monitoring.'"}
+      ]
+    },
+    {
       "id": "agentic-code-reasoning",
       "title": "Agentic Code Reasoning (Semi-Formal Verification)",
       "description": "LLM agents can reason about code semantics WITHOUT execution using semi-formal reasoning — structured prompts that require explicit premises, execution traces, and formal conclusions. Acts as a 'certificate' the agent can't fake.",
