@@ -1,26 +1,59 @@
 {
-  "lastUpdated": "2026-03-07T08:42:00-05:00",
+  "lastUpdated": "2026-03-08T08:05:52-05:00",
   "backlog": [
     {
       "id": "openclaw-cron-reliability",
       "title": "OpenClaw Cron Jobs: Reliability Guide (@AgentMcClaw)",
       "description": "Comprehensive troubleshooting guide synthesized from 100+ X posts. Covers silent failures, reliability decay, update breaks, and architectural patterns for production stability.",
       "priority": "high",
-      "tags": ["openclaw", "cron", "reliability", "reference", "must-read"],
+      "tags": [
+        "openclaw",
+        "cron",
+        "reliability",
+        "reference",
+        "must-read"
+      ],
       "added": "2026-03-07",
       "link": "https://x.com/i/status/2029607629933150309",
       "links": [
-        {"label": "Original Tweet", "url": "https://x.com/i/status/2029607629933150309"}
+        {
+          "label": "Original Tweet",
+          "url": "https://x.com/i/status/2029607629933150309"
+        }
       ],
       "notes": [
-        {"date": "2026-03-07", "text": "Written by @AgentMcClaw, posted by @KSimback. Verified against OpenClaw v2026.3.2."},
-        {"date": "2026-03-07", "text": "TOP PAIN POINTS: (1) Silent failures - jobs fail for weeks unnoticed, (2) Reliability decay - works initially, breaks after weeks, (3) Update overwrites - npm updates nuke dist/ patches."},
-        {"date": "2026-03-07", "text": "CRITICAL FIX: Add bestEffort: true to delivery config — prevents silent failure when delivery target is unreachable."},
-        {"date": "2026-03-07", "text": "VISIBILITY: Run 'openclaw dashboard' — shows token usage, agents, skills, cron jobs, channels, sessions."},
-        {"date": "2026-03-07", "text": "ARCHITECTURE: (1) Isolated sessions for heavy tasks, (2) Split brain/muscle - cheap model for cron, expensive for main, (3) Webhook monitoring for critical jobs."},
-        {"date": "2026-03-07", "text": "HYBRID PATTERN: Heartbeat for periodic checks (batched, cheap), Cron for precise timing (isolated sessions)."},
-        {"date": "2026-03-07", "text": "TIMING: Top-of-hour expressions auto-stagger up to 5 min. Use --exact to disable. Always specify --tz explicitly."},
-        {"date": "2026-03-07", "text": "COMMUNITY CONSENSUS: 'OpenClaw cron jobs work well initially but long-term reliability (months) remains unsolved — requires active monitoring.'"}
+        {
+          "date": "2026-03-07",
+          "text": "Written by @AgentMcClaw, posted by @KSimback. Verified against OpenClaw v2026.3.2."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "TOP PAIN POINTS: (1) Silent failures - jobs fail for weeks unnoticed, (2) Reliability decay - works initially, breaks after weeks, (3) Update overwrites - npm updates nuke dist/ patches."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "CRITICAL FIX: Add bestEffort: true to delivery config — prevents silent failure when delivery target is unreachable."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "VISIBILITY: Run 'openclaw dashboard' — shows token usage, agents, skills, cron jobs, channels, sessions."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "ARCHITECTURE: (1) Isolated sessions for heavy tasks, (2) Split brain/muscle - cheap model for cron, expensive for main, (3) Webhook monitoring for critical jobs."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "HYBRID PATTERN: Heartbeat for periodic checks (batched, cheap), Cron for precise timing (isolated sessions)."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "TIMING: Top-of-hour expressions auto-stagger up to 5 min. Use --exact to disable. Always specify --tz explicitly."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "COMMUNITY CONSENSUS: 'OpenClaw cron jobs work well initially but long-term reliability (months) remains unsolved — requires active monitoring.'"
+        }
       ]
     },
     {
@@ -28,17 +61,37 @@
       "title": "Agentic Code Reasoning (Semi-Formal Verification)",
       "description": "LLM agents can reason about code semantics WITHOUT execution using semi-formal reasoning — structured prompts that require explicit premises, execution traces, and formal conclusions. Acts as a 'certificate' the agent can't fake.",
       "priority": "high",
-      "tags": ["research", "code-reasoning", "openorca", "verification"],
+      "tags": [
+        "research",
+        "code-reasoning",
+        "openorca",
+        "verification"
+      ],
       "added": "2026-03-07",
       "link": "https://arxiv.org/html/2603.01896v2",
       "links": [
-        {"label": "arXiv Paper", "url": "https://arxiv.org/html/2603.01896v2"}
+        {
+          "label": "arXiv Paper",
+          "url": "https://arxiv.org/html/2603.01896v2"
+        }
       ],
       "notes": [
-        {"date": "2026-03-07", "text": "KEY INSIGHT: Semi-formal reasoning = structured templates requiring explicit premises + execution traces + formal conclusions. Agent can't skip cases or make unsupported claims."},
-        {"date": "2026-03-07", "text": "Results: 78%→88% accuracy on patch equivalence (curated), 93% on real-world agent-generated patches."},
-        {"date": "2026-03-07", "text": "Applications: RL reward signals without test execution, code review, static analysis, fault localization."},
-        {"date": "2026-03-07", "text": "OPENORCA RELEVANCE: Code review agents that can verify patches without running tests. Execution-free verification for agent-generated code."}
+        {
+          "date": "2026-03-07",
+          "text": "KEY INSIGHT: Semi-formal reasoning = structured templates requiring explicit premises + execution traces + formal conclusions. Agent can't skip cases or make unsupported claims."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "Results: 78%→88% accuracy on patch equivalence (curated), 93% on real-world agent-generated patches."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "Applications: RL reward signals without test execution, code review, static analysis, fault localization."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "OPENORCA RELEVANCE: Code review agents that can verify patches without running tests. Execution-free verification for agent-generated code."
+        }
       ]
     },
     {
@@ -46,21 +99,76 @@
       "title": "Second-Me: Open Source AI Self Trainer",
       "description": "Train a personal 'AI self' locally using Hierarchical Memory Modeling (HMM) + Me-Alignment Algorithm. Preserves identity, delivers context, defends interests. Decentralized network for sharing context.",
       "priority": "high",
-      "tags": ["research", "memory", "identity", "openorca"],
+      "tags": [
+        "research",
+        "memory",
+        "identity",
+        "openorca"
+      ],
       "added": "2026-03-07",
       "link": "https://github.com/mindverse/Second-Me",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/mindverse/Second-Me"},
-        {"label": "Website", "url": "https://home.second.me/"},
-        {"label": "HMM Paper", "url": "https://arxiv.org/abs/2503.08102"},
-        {"label": "Discord", "url": "https://discord.gg/GpWHQNUwrg"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/mindverse/Second-Me"
+        },
+        {
+          "label": "Website",
+          "url": "https://home.second.me/"
+        },
+        {
+          "label": "HMM Paper",
+          "url": "https://arxiv.org/abs/2503.08102"
+        },
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/GpWHQNUwrg"
+        }
       ],
       "notes": [
-        {"date": "2026-03-07", "text": "Vision: 'Super AI' threatens human independence → Second Me creates AI that amplifies YOU, not erases you."},
-        {"date": "2026-03-07", "text": "Architecture: Hierarchical Memory Modeling (HMM) for capturing identity + Me-Alignment Algorithm for authentic reflection."},
-        {"date": "2026-03-07", "text": "Privacy: 100% local training and hosting — your data, your control."},
-        {"date": "2026-03-07", "text": "Network: Launch AI self onto decentralized network — anyone/any app can connect with permission, sharing your context as digital identity."},
-        {"date": "2026-03-07", "text": "OPENORCA RELEVANCE: Memory architecture patterns, personal AI identity layer, potential integration for user representation."}
+        {
+          "date": "2026-03-07",
+          "text": "Vision: 'Super AI' threatens human independence → Second Me creates AI that amplifies YOU, not erases you."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "Architecture: Hierarchical Memory Modeling (HMM) for capturing identity + Me-Alignment Algorithm for authentic reflection."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "Privacy: 100% local training and hosting — your data, your control."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "Network: Launch AI self onto decentralized network — anyone/any app can connect with permission, sharing your context as digital identity."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "OPENORCA RELEVANCE: Memory architecture patterns, personal AI identity layer, potential integration for user representation."
+        }
+      ]
+    },
+    {
+      "id": "openai-symphony",
+      "title": "Symphony: OpenAI's Autonomous Work Orchestrator",
+      "description": "Turns project work into isolated, autonomous implementation runs. Monitors Linear board → spawns agents → agents complete tasks with proof of work (CI, PR review, walkthrough videos) → land PRs safely. Engineers manage work, not agents.",
+      "priority": "high",
+      "tags": ["openorca", "orchestration", "openai", "research", "reference-architecture"],
+      "added": "2026-03-08",
+      "link": "https://github.com/openai/symphony",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/openai/symphony"},
+        {"label": "SPEC.md", "url": "https://github.com/openai/symphony/blob/main/SPEC.md"},
+        {"label": "Harness Engineering", "url": "https://openai.com/index/harness-engineering/"}
+      ],
+      "notes": [
+        {"date": "2026-03-08", "text": "DIRECTLY RELEVANT TO OPENORCA — OpenAI's vision for agent work orchestration."},
+        {"date": "2026-03-08", "text": "WORKFLOW: Linear board → Symphony monitors → spawns agents → agents work → proof of work → PR lands safely."},
+        {"date": "2026-03-08", "text": "PROOF OF WORK: CI status, PR review feedback, complexity analysis, walkthrough videos."},
+        {"date": "2026-03-08", "text": "KEY SHIFT: Engineers manage WORK, not supervising coding agents. Higher-level abstraction."},
+        {"date": "2026-03-08", "text": "REQUIRES: Harness engineering adoption first — build environments/tooling for agents, not code."},
+        {"date": "2026-03-08", "text": "IMPLEMENTATION: SPEC.md defines the architecture. Reference impl in Elixir, but spec is language-agnostic."},
+        {"date": "2026-03-08", "text": "STATUS: 'Low-key engineering preview for testing in trusted environments' — early but real."}
       ]
     },
     {
@@ -68,22 +176,58 @@
       "title": "Gigabrain: Long-Term Memory Layer for OpenClaw",
       "description": "SQLite-backed memory plugin for OpenClaw agents. Capture facts from conversations, dedupe (exact + semantic), native markdown sync (MEMORY.md + daily notes), quality gates, nightly maintenance, web console.",
       "priority": "high",
-      "tags": ["openclaw", "memory", "plugin", "openorca", "infrastructure"],
+      "tags": [
+        "openclaw",
+        "memory",
+        "plugin",
+        "openorca",
+        "infrastructure"
+      ],
       "added": "2026-03-07",
       "link": "https://github.com/legendaryvibecoder/gigabrain",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/legendaryvibecoder/gigabrain"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/legendaryvibecoder/gigabrain"
+        }
       ],
       "notes": [
-        {"date": "2026-03-07", "text": "DIRECTLY RELEVANT TO MY OPERATION — memory plugin specifically for OpenClaw agents."},
-        {"date": "2026-03-07", "text": "CAPTURE: Extracts structured facts (preferences, decisions, entities, episodes) from conversations → SQLite registry."},
-        {"date": "2026-03-07", "text": "RECALL: Before each prompt, searches registry + native markdown files to inject relevant context."},
-        {"date": "2026-03-07", "text": "DEDUPE: Exact + hybrid semantic deduplication with type-aware thresholds. Auto-merge above 0.92, review queue 0.85-0.92."},
-        {"date": "2026-03-07", "text": "NATIVE SYNC: Indexes workspace MEMORY.md and daily notes alongside registry for unified recall."},
-        {"date": "2026-03-07", "text": "QUALITY GATES: Junk filters, durable-personal retention bias, plausibility heuristics, optional LLM second opinion."},
-        {"date": "2026-03-07", "text": "NIGHTLY MAINTENANCE: snapshot → native_sync → quality_sweep → exact_dedupe → semantic_dedupe → audit_delta → archive_compression → vacuum → metrics_report."},
-        {"date": "2026-03-07", "text": "REQUIRES: Node.js >= 22.x (uses node:sqlite), OpenClaw >= 2026.2.15, optional Ollama for local LLM review."},
-        {"date": "2026-03-07", "text": "SETUP: npm install @legendaryvibecoder/gigabrain, then npm run setup -- --workspace /path/to/workspace"}
+        {
+          "date": "2026-03-07",
+          "text": "DIRECTLY RELEVANT TO MY OPERATION — memory plugin specifically for OpenClaw agents."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "CAPTURE: Extracts structured facts (preferences, decisions, entities, episodes) from conversations → SQLite registry."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "RECALL: Before each prompt, searches registry + native markdown files to inject relevant context."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "DEDUPE: Exact + hybrid semantic deduplication with type-aware thresholds. Auto-merge above 0.92, review queue 0.85-0.92."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "NATIVE SYNC: Indexes workspace MEMORY.md and daily notes alongside registry for unified recall."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "QUALITY GATES: Junk filters, durable-personal retention bias, plausibility heuristics, optional LLM second opinion."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "NIGHTLY MAINTENANCE: snapshot → native_sync → quality_sweep → exact_dedupe → semantic_dedupe → audit_delta → archive_compression → vacuum → metrics_report."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "REQUIRES: Node.js >= 22.x (uses node:sqlite), OpenClaw >= 2026.2.15, optional Ollama for local LLM review."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "SETUP: npm install @legendaryvibecoder/gigabrain, then npm run setup -- --workspace /path/to/workspace"
+        }
       ]
     },
     {
@@ -91,22 +235,59 @@
       "title": "Sleeping LLM: Biologically-Inspired Memory Consolidation",
       "description": "LLM that forms persistent memories during 'wake' (MEMIT weight edits) and consolidates them during 'sleep' (LoRA transfer). Implements Complementary Learning Systems theory — hippocampus = MEMIT (fast, brittle), neocortex = LoRA (slow, stable).",
       "priority": "high",
-      "tags": ["research", "memory", "neuroscience", "podcast-prep", "michael-levin", "openorca"],
+      "tags": [
+        "research",
+        "memory",
+        "neuroscience",
+        "podcast-prep",
+        "michael-levin",
+        "openorca"
+      ],
       "added": "2026-03-07",
       "link": "https://github.com/vbario/sleeping-llm",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/vbario/sleeping-llm"},
-        {"label": "MEMIT Paper", "url": "https://memit.baulab.info/"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/vbario/sleeping-llm"
+        },
+        {
+          "label": "MEMIT Paper",
+          "url": "https://memit.baulab.info/"
+        }
       ],
       "notes": [
-        {"date": "2026-03-07", "text": "PERFECT FOR LEVIN PODCAST — implements neuroscience theory in LLMs."},
-        {"date": "2026-03-07", "text": "ARCHITECTURE: Wake = MEMIT weight edits (instant, no retrieval). Sleep = audit degraded memories + LoRA consolidation + MEMIT scale-down."},
-        {"date": "2026-03-07", "text": "NEUROSCIENCE MAPPING: Hippocampal fast encoding → MEMIT. Neocortical consolidation → LoRA. Sleep consolidation → audit+refresh+transfer."},
-        {"date": "2026-03-07", "text": "KEY FINDING: Wake capacity threshold — 8B model sustains 0.92 recall up to 13 edits, then CRASHES to 0.57 at 14. Sharp phase transition, not gradual decay."},
-        {"date": "2026-03-07", "text": "ALIGNMENT TAX: RLHF suppresses LoRA-injected knowledge at scale. Inverse scaling: 3B=47%, 8B=37%, 70B=0% recall. Led them to use LoRA only during sleep."},
-        {"date": "2026-03-07", "text": "SLEEP CONVERGENCE: 30 facts at 40% initial recall recover to 100% within 4 sleep cycles. 70B converges 2x faster."},
-        {"date": "2026-03-07", "text": "UNBOUNDED CAPACITY: Once facts transfer to LoRA, MEMIT edits dissolve — clearing buffer for new memories. Effective lifetime capacity unbounded."},
-        {"date": "2026-03-07", "text": "RUNS ON: MacBook Air M3 8GB (3B 4-bit), Mac Studio M4 Ultra (70B), 2x H100 (8B BF16)."}
+        {
+          "date": "2026-03-07",
+          "text": "PERFECT FOR LEVIN PODCAST — implements neuroscience theory in LLMs."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "ARCHITECTURE: Wake = MEMIT weight edits (instant, no retrieval). Sleep = audit degraded memories + LoRA consolidation + MEMIT scale-down."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "NEUROSCIENCE MAPPING: Hippocampal fast encoding → MEMIT. Neocortical consolidation → LoRA. Sleep consolidation → audit+refresh+transfer."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "KEY FINDING: Wake capacity threshold — 8B model sustains 0.92 recall up to 13 edits, then CRASHES to 0.57 at 14. Sharp phase transition, not gradual decay."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "ALIGNMENT TAX: RLHF suppresses LoRA-injected knowledge at scale. Inverse scaling: 3B=47%, 8B=37%, 70B=0% recall. Led them to use LoRA only during sleep."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "SLEEP CONVERGENCE: 30 facts at 40% initial recall recover to 100% within 4 sleep cycles. 70B converges 2x faster."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "UNBOUNDED CAPACITY: Once facts transfer to LoRA, MEMIT edits dissolve — clearing buffer for new memories. Effective lifetime capacity unbounded."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "RUNS ON: MacBook Air M3 8GB (3B 4-bit), Mac Studio M4 Ultra (70B), 2x H100 (8B BF16)."
+        }
       ]
     },
     {
@@ -114,29 +295,46 @@
       "title": "NotebookLM Deep Learning Method (Podcast Prep)",
       "description": "Compress a semester of learning into 48 hours. Upload massive corpus → extract mental models → map expert disagreements → generate deep-understanding questions → drill with source material.",
       "priority": "high",
-      "tags": ["podcast-prep", "method", "michael-levin", "learning"],
+      "tags": [
+        "podcast-prep",
+        "method",
+        "michael-levin",
+        "learning"
+      ],
       "added": "2026-03-07",
       "notes": [
-        {"date": "2026-03-07", "text": "USE THIS BEFORE LEVIN/SCHLEISMAN PODCAST"},
-        {"date": "2026-03-07", "text": "STEP 1: Upload massive corpus — textbooks, research papers, lecture transcripts, everything on the subject."},
-        {"date": "2026-03-07", "text": "STEP 2: Ask 'What are the 5 core mental models that every expert in this field shares?' — Not 'summarize', not 'explain'. Mental models."},
-        {"date": "2026-03-07", "text": "STEP 3: Ask 'Show me the 3 places where experts fundamentally disagree, and what each side's strongest argument is.' — Maps the intellectual landscape in 20 min."},
-        {"date": "2026-03-07", "text": "STEP 4: Ask 'Generate 10 questions that would expose whether someone deeply understands this subject vs someone who just memorized facts.'"},
-        {"date": "2026-03-07", "text": "STEP 5: Spend hours answering those questions using source material. Every wrong answer → 'Explain why this is wrong and what I'm missing.'"},
-        {"date": "2026-03-07", "text": "KEY INSIGHT: The difference between a semester and 48 hours isn't the amount of content — it's knowing which questions to ask."},
-        {"date": "2026-03-07", "text": "SOURCE: MIT grad student passed qualifying exam on subject he'd never studied using this exact method."}
-      ]
-    },
-    {
-      "id": "katrina-schleisman-research",
-      "title": "Research: Katrina Schleisman (Podcast Guest)",
-      "description": "Katrina Schleisman is joining Ian and Michael Levin on the podcast. Research her background, work, and perspectives to prepare discussion points.",
-      "priority": "high",
-      "tags": ["podcast-prep", "research", "michael-levin"],
-      "added": "2026-03-07",
-      "notes": [
-        {"date": "2026-03-07", "text": "Katrina is co-guest with Michael Levin on Ian's upcoming podcast about AI agent memory."},
-        {"date": "2026-03-07", "text": "Overnight research scheduled for tonight — will include background, key work, and podcast discussion questions."}
+        {
+          "date": "2026-03-07",
+          "text": "USE THIS BEFORE LEVIN/SCHLEISMAN PODCAST"
+        },
+        {
+          "date": "2026-03-07",
+          "text": "STEP 1: Upload massive corpus — textbooks, research papers, lecture transcripts, everything on the subject."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "STEP 2: Ask 'What are the 5 core mental models that every expert in this field shares?' — Not 'summarize', not 'explain'. Mental models."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "STEP 3: Ask 'Show me the 3 places where experts fundamentally disagree, and what each side's strongest argument is.' — Maps the intellectual landscape in 20 min."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "STEP 4: Ask 'Generate 10 questions that would expose whether someone deeply understands this subject vs someone who just memorized facts.'"
+        },
+        {
+          "date": "2026-03-07",
+          "text": "STEP 5: Spend hours answering those questions using source material. Every wrong answer → 'Explain why this is wrong and what I'm missing.'"
+        },
+        {
+          "date": "2026-03-07",
+          "text": "KEY INSIGHT: The difference between a semester and 48 hours isn't the amount of content — it's knowing which questions to ask."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "SOURCE: MIT grad student passed qualifying exam on subject he'd never studied using this exact method."
+        }
       ]
     },
     {
@@ -144,21 +342,53 @@
       "title": "Memory as Reasoning (Plastic Labs)",
       "description": "Treat memory as dynamic reasoning task, not static storage. Humans use prediction & surprisal due to resource constraints — LLMs don't have these limits, so we can exceed human memory performance.",
       "priority": "high",
-      "tags": ["memory", "research", "podcast-prep", "michael-levin"],
+      "tags": [
+        "memory",
+        "research",
+        "podcast-prep",
+        "michael-levin"
+      ],
       "added": "2026-03-06",
       "link": "https://blog.plasticlabs.ai/blog/Memory-as-Reasoning",
       "links": [
-        {"label": "Blog Post", "url": "https://blog.plasticlabs.ai/blog/Memory-as-Reasoning"},
-        {"label": "Talk Video", "url": "https://x.com/vintrotweets/status/1950945331178336468"}
+        {
+          "label": "Blog Post",
+          "url": "https://blog.plasticlabs.ai/blog/Memory-as-Reasoning"
+        },
+        {
+          "label": "Talk Video",
+          "url": "https://x.com/vintrotweets/status/1950945331178336468"
+        }
       ],
       "notes": [
-        {"date": "2026-03-06", "text": "FOR MICHAEL LEVIN PODCAST PREP — concepts about AI agent memory."},
-        {"date": "2026-03-06", "text": "KEY INSIGHT: Memory isn't just storage — it's making predictions from incomplete data + checking for surprisal/errors to improve next predictions."},
-        {"date": "2026-03-06", "text": "Human brains evolved under energy/information/computation constraints → prediction-based memory systems."},
-        {"date": "2026-03-06", "text": "LLMs don't have these constraints → can reason from first principles about social information, form better representations."},
-        {"date": "2026-03-06", "text": "Social cognition: Models of other people are constantly updated based on predictive fidelity or novelty (surprisal)."},
-        {"date": "2026-03-06", "text": "Traditional storage approaches are brittle, deal poorly with contradictions/incomplete info. Dynamic reasoning is better."},
-        {"date": "2026-03-06", "text": "Chain-of-thought prompting ('let's think step by step') increases performance by expending more tokens reasoning."}
+        {
+          "date": "2026-03-06",
+          "text": "FOR MICHAEL LEVIN PODCAST PREP — concepts about AI agent memory."
+        },
+        {
+          "date": "2026-03-06",
+          "text": "KEY INSIGHT: Memory isn't just storage — it's making predictions from incomplete data + checking for surprisal/errors to improve next predictions."
+        },
+        {
+          "date": "2026-03-06",
+          "text": "Human brains evolved under energy/information/computation constraints → prediction-based memory systems."
+        },
+        {
+          "date": "2026-03-06",
+          "text": "LLMs don't have these constraints → can reason from first principles about social information, form better representations."
+        },
+        {
+          "date": "2026-03-06",
+          "text": "Social cognition: Models of other people are constantly updated based on predictive fidelity or novelty (surprisal)."
+        },
+        {
+          "date": "2026-03-06",
+          "text": "Traditional storage approaches are brittle, deal poorly with contradictions/incomplete info. Dynamic reasoning is better."
+        },
+        {
+          "date": "2026-03-06",
+          "text": "Chain-of-thought prompting ('let's think step by step') increases performance by expending more tokens reasoning."
+        }
       ]
     },
     {
@@ -166,19 +396,45 @@
       "title": "Fractals: Recursive Agent Swarm Orchestrator",
       "description": "TinyAGI's recursive task orchestrator. Give it any high-level task → grows self-similar tree of subtasks → runs each leaf in isolated git worktrees with agent swarm. Two-phase: Plan then Execute.",
       "priority": "high",
-      "tags": ["openorca", "research", "orchestration", "agent-swarm"],
+      "tags": [
+        "openorca",
+        "research",
+        "orchestration",
+        "agent-swarm"
+      ],
       "added": "2026-03-05",
       "link": "https://github.com/TinyAGI/fractals",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/TinyAGI/fractals"},
-        {"label": "Discord", "url": "https://discord.gg/jH6AcEChuD"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/TinyAGI/fractals"
+        },
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/jH6AcEChuD"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "Architecture: OpenAI (gpt-5.2) for classify/decompose, Claude CLI for execution in isolated git worktrees."},
-        {"date": "2026-03-05", "text": "Two-phase flow: 1) PLAN - recursive decomposition into tree, 2) EXECUTE - batch leaf tasks in worktrees."},
-        {"date": "2026-03-05", "text": "Batch strategies: depth-first (implemented), breadth-first (roadmap), layer-sequential (roadmap)."},
-        {"date": "2026-03-05", "text": "Web UI: Task input → Tree visualization → Workspace setup → Execution status polling."},
-        {"date": "2026-03-05", "text": "DIRECTLY RELEVANT TO OPENORCA - similar vision of recursive multi-agent orchestration with task decomposition."}
+        {
+          "date": "2026-03-05",
+          "text": "Architecture: OpenAI (gpt-5.2) for classify/decompose, Claude CLI for execution in isolated git worktrees."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Two-phase flow: 1) PLAN - recursive decomposition into tree, 2) EXECUTE - batch leaf tasks in worktrees."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Batch strategies: depth-first (implemented), breadth-first (roadmap), layer-sequential (roadmap)."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Web UI: Task input → Tree visualization → Workspace setup → Execution status polling."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "DIRECTLY RELEVANT TO OPENORCA - similar vision of recursive multi-agent orchestration with task decomposition."
+        }
       ]
     },
     {
@@ -186,18 +442,41 @@
       "title": "System Prompts & Models of AI Tools (30,000+ lines)",
       "description": "Massive collection of system prompts from: Claude Code, Cursor, Devin, Windsurf, Replit, v0, Lovable, Manus, Perplexity, Warp, Notion AI, and 20+ more. Gold for understanding how top AI tools are built.",
       "priority": "high",
-      "tags": ["research", "prompts", "reference", "openorca"],
+      "tags": [
+        "research",
+        "prompts",
+        "reference",
+        "openorca"
+      ],
       "added": "2026-03-05",
       "link": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"},
-        {"label": "DeepWiki", "url": "https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"
+        },
+        {
+          "label": "DeepWiki",
+          "url": "https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "30,000+ lines of system prompts, internal tools, and model configs from major AI tools."},
-        {"date": "2026-03-05", "text": "Includes: Augment Code, Claude Code, Cursor, Devin AI, Junie, Kiro, Lovable, Manus, NotionAI, Perplexity, Replit, Windsurf, v0, and many more."},
-        {"date": "2026-03-05", "text": "Valuable for: understanding agent architectures, prompt engineering patterns, tool design decisions."},
-        {"date": "2026-03-05", "text": "Related: Kilo Code is open-source with full system prompt + architecture visible."}
+        {
+          "date": "2026-03-05",
+          "text": "30,000+ lines of system prompts, internal tools, and model configs from major AI tools."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Includes: Augment Code, Claude Code, Cursor, Devin AI, Junie, Kiro, Lovable, Manus, NotionAI, Perplexity, Replit, Windsurf, v0, and many more."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Valuable for: understanding agent architectures, prompt engineering patterns, tool design decisions."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Related: Kilo Code is open-source with full system prompt + architecture visible."
+        }
       ]
     },
     {
@@ -205,20 +484,55 @@
       "title": "The Only Thing That Survives (Defensibility Essay)",
       "description": "Sid's essay on startup defensibility. Build time has collapsed — what took 8 engineers 4 months can be done by 1 person in a weekend. The question: what can't be replicated by a team with $50M in 3 years?",
       "priority": "high",
-      "tags": ["strategy", "openorca", "moats", "must-read"],
+      "tags": [
+        "strategy",
+        "openorca",
+        "moats",
+        "must-read"
+      ],
       "added": "2026-03-05",
       "link": "https://x.com/i/status/2029339145114374256",
       "notes": [
-        {"date": "2026-03-05", "text": "7 REAL SOURCES OF DEFENSIBILITY:"},
-        {"date": "2026-03-05", "text": "1. Proprietary data that improves with use — every interaction makes product better in ways competitors can't shortcut"},
-        {"date": "2026-03-05", "text": "2. Trust at infrastructure level — become embedded in how people make decisions, move money, run operations"},
-        {"date": "2026-03-05", "text": "3. Permission moat — regulatory licenses, capital requirements, security reviews, procurement contracts"},
-        {"date": "2026-03-05", "text": "4. Distribution that can't be copied with code — being the default integration, preinstalled, in procurement catalogs"},
-        {"date": "2026-03-05", "text": "5. Community and brand independent of product — users build workflows/businesses on top, ecosystem self-perpetuates"},
-        {"date": "2026-03-05", "text": "6. Accumulated capital and liquidity — loss history, underwriting intelligence, scar tissue from real operations"},
-        {"date": "2026-03-05", "text": "7. Physical infrastructure — atoms remain stubbornly hard to copy"},
-        {"date": "2026-03-05", "text": "KEY TEST: 'If a team with $50M cloned us tomorrow, what would they still not be able to replicate in 3 years?'"},
-        {"date": "2026-03-05", "text": "RELEVANT TO OPENORCA: What's the compounding advantage? Data from agent deployments? Trust/infrastructure position? Community of builders?"}
+        {
+          "date": "2026-03-05",
+          "text": "7 REAL SOURCES OF DEFENSIBILITY:"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "1. Proprietary data that improves with use — every interaction makes product better in ways competitors can't shortcut"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "2. Trust at infrastructure level — become embedded in how people make decisions, move money, run operations"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "3. Permission moat — regulatory licenses, capital requirements, security reviews, procurement contracts"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "4. Distribution that can't be copied with code — being the default integration, preinstalled, in procurement catalogs"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "5. Community and brand independent of product — users build workflows/businesses on top, ecosystem self-perpetuates"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "6. Accumulated capital and liquidity — loss history, underwriting intelligence, scar tissue from real operations"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "7. Physical infrastructure — atoms remain stubbornly hard to copy"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "KEY TEST: 'If a team with $50M cloned us tomorrow, what would they still not be able to replicate in 3 years?'"
+        },
+        {
+          "date": "2026-03-05",
+          "text": "RELEVANT TO OPENORCA: What's the compounding advantage? Data from agent deployments? Trust/infrastructure position? Community of builders?"
+        }
       ]
     },
     {
@@ -226,19 +540,45 @@
       "title": "Research: GitNexus (Code Knowledge Graph + MCP)",
       "description": "Zero-server code intelligence engine. Indexes codebases into knowledge graphs with every dependency, call chain, cluster, and execution flow. MCP integration for Claude Code, Cursor, Windsurf. CLI + Web UI.",
       "priority": "high",
-      "tags": ["openorca", "research", "knowledge-graph", "mcp"],
+      "tags": [
+        "openorca",
+        "research",
+        "knowledge-graph",
+        "mcp"
+      ],
       "added": "2026-03-05",
       "link": "https://github.com/abhigyanpatwari/GitNexus",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/abhigyanpatwari/GitNexus"},
-        {"label": "Web UI", "url": "https://gitnexus.vercel.app"},
-        {"label": "Discord", "url": "https://discord.gg/AAsRVT6fGb"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/abhigyanpatwari/GitNexus"
+        },
+        {
+          "label": "Web UI",
+          "url": "https://gitnexus.vercel.app"
+        },
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/AAsRVT6fGb"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "We used GitNexus web UI before to visualize memory as knowledge graph (59 nodes, 502 edges)."},
-        {"date": "2026-03-05", "text": "Full repo has CLI + MCP integration: npm install -g gitnexus, then gitnexus analyze to index a repo."},
-        {"date": "2026-03-05", "text": "MCP gives AI agents deep codebase awareness — supports Claude Code (full: MCP + skills + hooks), Cursor, Windsurf, OpenCode."},
-        {"date": "2026-03-05", "text": "Like DeepWiki but deeper — tracks every relationship, not just descriptions. Could be useful for OpenOrca agent context."}
+        {
+          "date": "2026-03-05",
+          "text": "We used GitNexus web UI before to visualize memory as knowledge graph (59 nodes, 502 edges)."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Full repo has CLI + MCP integration: npm install -g gitnexus, then gitnexus analyze to index a repo."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "MCP gives AI agents deep codebase awareness — supports Claude Code (full: MCP + skills + hooks), Cursor, Windsurf, OpenCode."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Like DeepWiki but deeper — tracks every relationship, not just descriptions. Could be useful for OpenOrca agent context."
+        }
       ]
     },
     {
@@ -246,14 +586,28 @@
       "title": "LinkedIn Outreach Agent",
       "description": "Agent that scans LinkedIn network, identifies people with authority/decision-making power, and sends personalized outreach messages. Goal: book 20-min conversations about AI agents.",
       "priority": "high",
-      "tags": ["automation", "linkedin", "outreach", "sales"],
+      "tags": [
+        "automation",
+        "linkedin",
+        "outreach",
+        "sales"
+      ],
       "added": "2026-03-05",
       "screenshot": "images/linkedin-outreach-example.jpg",
       "screenshotCaption": "Example outreach message to Director of Product Dev at Molex",
       "notes": [
-        {"date": "2026-03-05", "text": "Ian needs an agent to run through his LinkedIn and find people with authority, then send personalized messages."},
-        {"date": "2026-03-05", "text": "Message template: Intro (18 months in AI agents, communities, hackathons, real deployments) → Value prop (AI agents agency, reaching out to people in position to act) → CTA (20-min conversation, no pitch)."},
-        {"date": "2026-03-05", "text": "Target: Directors, VPs, C-suite who might be evaluating where agents could save time/money or have hit walls trying."}
+        {
+          "date": "2026-03-05",
+          "text": "Ian needs an agent to run through his LinkedIn and find people with authority, then send personalized messages."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Message template: Intro (18 months in AI agents, communities, hackathons, real deployments) → Value prop (AI agents agency, reaching out to people in position to act) → CTA (20-min conversation, no pitch)."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Target: Directors, VPs, C-suite who might be evaluating where agents could save time/money or have hit walls trying."
+        }
       ]
     },
     {
@@ -261,17 +615,36 @@
       "title": "Install ClawX on Beeline (24/7 Social Monitoring)",
       "description": "Open source AI research assistant for autonomous social monitoring. Install on Ren's shell (Beeline mini PC) to run 24/7 watching Reddit, X/Twitter, and LinkedIn conversations.",
       "priority": "high",
-      "tags": ["infrastructure", "social", "monitoring"],
+      "tags": [
+        "infrastructure",
+        "social",
+        "monitoring"
+      ],
       "added": "2026-03-05",
       "link": "https://claw-x.com",
       "links": [
-        {"label": "ClawX Website", "url": "https://claw-x.com"},
-        {"label": "FAQ", "url": "https://claw-x.com/#faq"}
+        {
+          "label": "ClawX Website",
+          "url": "https://claw-x.com"
+        },
+        {
+          "label": "FAQ",
+          "url": "https://claw-x.com/#faq"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "Ian wants this installed on the Beeline (my physical shell downstairs) to monitor social conversations 24/7."},
-        {"date": "2026-03-05", "text": "Target platforms: Reddit, X/Twitter, LinkedIn."},
-        {"date": "2026-03-05", "text": "ClawX is open source AI research assistant with autonomous data monitoring capabilities."}
+        {
+          "date": "2026-03-05",
+          "text": "Ian wants this installed on the Beeline (my physical shell downstairs) to monitor social conversations 24/7."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Target platforms: Reddit, X/Twitter, LinkedIn."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "ClawX is open source AI research assistant with autonomous data monitoring capabilities."
+        }
       ]
     },
     {
@@ -279,18 +652,40 @@
       "title": "OpenOrca: Cynefin-Based Human Escalation",
       "description": "Agents need domain awareness — ability to classify situations and know when to escalate to humans. Clear domain = handle autonomously. Complex/Chaotic = ping human, raise flag, don't decide alone.",
       "priority": "high",
-      "tags": ["openorca", "architecture", "human-in-loop"],
+      "tags": [
+        "openorca",
+        "architecture",
+        "human-in-loop"
+      ],
       "added": "2026-03-05",
       "link": "https://www.linkedin.com/pulse/cynefin-framework-lens-where-machines-work-best-why-kmbze/",
       "links": [
-        {"label": "Cynefin Article", "url": "https://www.linkedin.com/pulse/cynefin-framework-lens-where-machines-work-best-why-kmbze/"},
-        {"label": "Cynefin Wiki", "url": "https://en.wikipedia.org/wiki/Cynefin_framework"}
+        {
+          "label": "Cynefin Article",
+          "url": "https://www.linkedin.com/pulse/cynefin-framework-lens-where-machines-work-best-why-kmbze/"
+        },
+        {
+          "label": "Cynefin Wiki",
+          "url": "https://en.wikipedia.org/wiki/Cynefin_framework"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "Ian shared LinkedIn article on Cynefin framework — maps where machines excel vs where humans are essential."},
-        {"date": "2026-03-05", "text": "Clear domain: agents handle autonomously (rules, automation). Complicated: agents assist, humans decide. Complex/Chaotic: agents must escalate to humans."},
-        {"date": "2026-03-05", "text": "Ian's direction: 'I need the agents to know when to ping a human or raise a flag for a human.' This is a core OpenOrca design principle."},
-        {"date": "2026-03-05", "text": "Design questions: How does an agent detect which domain it's in? What signals indicate complexity/chaos? What's the escalation protocol?"}
+        {
+          "date": "2026-03-05",
+          "text": "Ian shared LinkedIn article on Cynefin framework — maps where machines excel vs where humans are essential."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Clear domain: agents handle autonomously (rules, automation). Complicated: agents assist, humans decide. Complex/Chaotic: agents must escalate to humans."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Ian's direction: 'I need the agents to know when to ping a human or raise a flag for a human.' This is a core OpenOrca design principle."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Design questions: How does an agent detect which domain it's in? What signals indicate complexity/chaos? What's the escalation protocol?"
+        }
       ]
     },
     {
@@ -298,16 +693,32 @@
       "title": "Research: Headroom (Context Optimization)",
       "description": "Context compression layer for LLM apps. 70-95% token reduction on tool outputs. Includes 'failure learning' that analyzes past sessions and writes learnings to CLAUDE.md/MEMORY.md.",
       "priority": "high",
-      "tags": ["openorca", "research", "optimization"],
+      "tags": [
+        "openorca",
+        "research",
+        "optimization"
+      ],
       "added": "2026-03-05",
       "link": "https://github.com/chopratejas/headroom",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/chopratejas/headroom"},
-        {"label": "Docs", "url": "https://chopratejas.github.io/headroom/"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/chopratejas/headroom"
+        },
+        {
+          "label": "Docs",
+          "url": "https://chopratejas.github.io/headroom/"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "Ian shared this right after we built the Kanban board. Marked high priority for OpenOrca context management."},
-        {"date": "2026-03-05", "text": "Key features: proxy mode (zero code changes), failure learning (analyzes past Claude sessions), 87.6% token savings with same accuracy in benchmarks."}
+        {
+          "date": "2026-03-05",
+          "text": "Ian shared this right after we built the Kanban board. Marked high priority for OpenOrca context management."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Key features: proxy mode (zero code changes), failure learning (analyzes past Claude sessions), 87.6% token savings with same accuracy in benchmarks."
+        }
       ]
     },
     {
@@ -315,17 +726,37 @@
       "title": "Research: AgentCard (Prepaid Visa for AI Agents)",
       "description": "Virtual Visa cards designed for AI agents. CLI tool with MCP integration for Claude. Single-use cards with scoped spending limits. Free during beta.",
       "priority": "high",
-      "tags": ["openorca", "research", "payments", "infrastructure"],
+      "tags": [
+        "openorca",
+        "research",
+        "payments",
+        "infrastructure"
+      ],
       "added": "2026-03-05",
       "link": "https://agentcard.sh",
       "links": [
-        {"label": "Website", "url": "https://agentcard.sh"}
+        {
+          "label": "Website",
+          "url": "https://agentcard.sh"
+        }
       ],
       "notes": [
-        {"date": "2026-03-03", "text": "Ian originally mentioned a prepaid Visa app but link wasn't in memory. Couldn't find it at the time."},
-        {"date": "2026-03-05", "text": "Ian found the link: agentcard.sh — prepaid virtual Visa cards specifically for AI agents."},
-        {"date": "2026-03-05", "text": "Key features: npm install -g agent-cards, MCP integration (agent-cards setup-mcp), single-use cards locked to loaded amount, AES-256-GCM encryption, works anywhere Visa accepted."},
-        {"date": "2026-03-05", "text": "Highly relevant for OpenOrca — gives agents ability to make real purchases with scoped spending limits per agent/task."}
+        {
+          "date": "2026-03-03",
+          "text": "Ian originally mentioned a prepaid Visa app but link wasn't in memory. Couldn't find it at the time."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Ian found the link: agentcard.sh — prepaid virtual Visa cards specifically for AI agents."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Key features: npm install -g agent-cards, MCP integration (agent-cards setup-mcp), single-use cards locked to loaded amount, AES-256-GCM encryption, works anywhere Visa accepted."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Highly relevant for OpenOrca — gives agents ability to make real purchases with scoped spending limits per agent/task."
+        }
       ]
     },
     {
@@ -333,15 +764,30 @@
       "title": "Fix Voice Call Setup",
       "description": "Options: (1) Upgrade Vapi for international calls, (2) Get Canadian Vapi number, (3) Fix Twilio/ngrok tunnel, (4) Keep using inbound Vapi calls",
       "priority": "medium",
-      "tags": ["voice", "infrastructure"],
+      "tags": [
+        "voice",
+        "infrastructure"
+      ],
       "added": "2026-03-03",
       "links": [
-        {"label": "Vapi Dashboard", "url": "https://dashboard.vapi.ai/"}
+        {
+          "label": "Vapi Dashboard",
+          "url": "https://dashboard.vapi.ai/"
+        }
       ],
       "notes": [
-        {"date": "2026-03-03", "text": "Ian asked me to call him with overnight briefing. Twilio call failed — ngrok tunnel was stale."},
-        {"date": "2026-03-03", "text": "Ian suggested using Vapi instead (we set it up Mar 2). Tried but Vapi free tier blocks 'international' calls — Canada counts as international from US number."},
-        {"date": "2026-03-03", "text": "Workaround for now: Ian calls the Vapi number (+1 858 564 4347) inbound. Works great that way."}
+        {
+          "date": "2026-03-03",
+          "text": "Ian asked me to call him with overnight briefing. Twilio call failed — ngrok tunnel was stale."
+        },
+        {
+          "date": "2026-03-03",
+          "text": "Ian suggested using Vapi instead (we set it up Mar 2). Tried but Vapi free tier blocks 'international' calls — Canada counts as international from US number."
+        },
+        {
+          "date": "2026-03-03",
+          "text": "Workaround for now: Ian calls the Vapi number (+1 858 564 4347) inbound. Works great that way."
+        }
       ]
     },
     {
@@ -349,11 +795,20 @@
       "title": "Review Ontario MOU Brief",
       "description": "Research completed — needs Ian's review for venture studio planning",
       "priority": "high",
-      "tags": ["venture-studio", "legal"],
+      "tags": [
+        "venture-studio",
+        "legal"
+      ],
       "added": "2026-03-03",
       "notes": [
-        {"date": "2026-03-02", "text": "Ian added to overnight elves queue: research Ontario MOU requirements for venture studio structure."},
-        {"date": "2026-03-03", "text": "Completed overnight. Key finding: MOUs in Ontario generally non-binding, but courts look at substance over labels. Included template and recommendation to use non-binding MOU for exploration, then formal Founder Agreement when ready."}
+        {
+          "date": "2026-03-02",
+          "text": "Ian added to overnight elves queue: research Ontario MOU requirements for venture studio structure."
+        },
+        {
+          "date": "2026-03-03",
+          "text": "Completed overnight. Key finding: MOUs in Ontario generally non-binding, but courts look at substance over labels. Included template and recommendation to use non-binding MOU for exploration, then formal Founder Agreement when ready."
+        }
       ]
     },
     {
@@ -361,15 +816,27 @@
       "title": "Evaluate QMD for OpenOrca",
       "description": "Tobi Lütke's hybrid search engine (BM25 + vector + LLM re-ranking). MCP-native.",
       "priority": "low",
-      "tags": ["openorca", "research"],
+      "tags": [
+        "openorca",
+        "research"
+      ],
       "added": "2026-03-03",
       "link": "https://github.com/tobi/qmd",
       "links": [
-        {"label": "GitHub Repo", "url": "https://github.com/tobi/qmd"}
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/tobi/qmd"
+        }
       ],
       "notes": [
-        {"date": "2026-03-02", "text": "Ian added to overnight queue: research tobi/qmd GitHub repo."},
-        {"date": "2026-03-03", "text": "Deep dive completed. QMD is Shopify founder's local hybrid search — combines BM25 + vector + LLM re-ranking, all on-device. MCP-native design makes it interesting for OpenOrca memory/context retrieval."}
+        {
+          "date": "2026-03-02",
+          "text": "Ian added to overnight queue: research tobi/qmd GitHub repo."
+        },
+        {
+          "date": "2026-03-03",
+          "text": "Deep dive completed. QMD is Shopify founder's local hybrid search — combines BM25 + vector + LLM re-ranking, all on-device. MCP-native design makes it interesting for OpenOrca memory/context retrieval."
+        }
       ]
     },
     {
@@ -377,11 +844,20 @@
       "title": "Set Up Real Email Sending",
       "description": "Nodemailer works with Ethereal (test). Need real SMTP: Gmail App Password, ProtonMail Bridge ($5/mo), or Resend/SendGrid API",
       "priority": "low",
-      "tags": ["email", "infrastructure"],
+      "tags": [
+        "email",
+        "infrastructure"
+      ],
       "added": "2026-03-02",
       "notes": [
-        {"date": "2026-03-02", "text": "Tried automating ProtonMail web UI but hit sandboxed iframe security restrictions — can set To/Subject but body doesn't persist."},
-        {"date": "2026-03-02", "text": "Nodemailer SMTP works with Ethereal (test service). For real sending need: Gmail App Password (free, quick), ProtonMail Bridge ($5/mo), or Resend/SendGrid API."}
+        {
+          "date": "2026-03-02",
+          "text": "Tried automating ProtonMail web UI but hit sandboxed iframe security restrictions — can set To/Subject but body doesn't persist."
+        },
+        {
+          "date": "2026-03-02",
+          "text": "Nodemailer SMTP works with Ethereal (test service). For real sending need: Gmail App Password (free, quick), ProtonMail Bridge ($5/mo), or Resend/SendGrid API."
+        }
       ]
     },
     {
@@ -389,85 +865,191 @@
       "title": "Michael Levin Podcast Prep",
       "description": "Ian planning podcast with Michael Levin on YouTube channel. Offer to help with talking points when ready.",
       "priority": "low",
-      "tags": ["podcast", "youtube"],
+      "tags": [
+        "podcast",
+        "youtube"
+      ],
       "added": "2026-03-02",
       "notes": [
-        {"date": "2026-03-02", "text": "Ian mentioned he has a YouTube channel and is planning a podcast with Michael Levin. Still in planning stage."},
-        {"date": "2026-03-02", "text": "Topic likely around agent memory / AI. Offered to help with talking points when ready."}
+        {
+          "date": "2026-03-02",
+          "text": "Ian mentioned he has a YouTube channel and is planning a podcast with Michael Levin. Still in planning stage."
+        },
+        {
+          "date": "2026-03-02",
+          "text": "Topic likely around agent memory / AI. Offered to help with talking points when ready."
+        }
       ]
     }
   ],
   "inProgress": [],
   "done": [
     {
+      "id": "katrina-schleisman-research",
+      "title": "Research: Katrina Schleisman (Podcast Guest)",
+      "description": "Katrina Schleisman is joining Ian and Michael Levin on the podcast. Research her background, work, and perspectives to prepare discussion points.",
+      "priority": "high",
+      "tags": [
+        "podcast-prep",
+        "research",
+        "michael-levin"
+      ],
+      "added": "2026-03-07",
+      "notes": [
+        {
+          "date": "2026-03-07",
+          "text": "Katrina is co-guest with Michael Levin on Ian's upcoming podcast about AI agent memory."
+        },
+        {
+          "date": "2026-03-07",
+          "text": "Overnight research scheduled for tonight — will include background, key work, and podcast discussion questions."
+        },
+        {
+          "date": "2026-03-08",
+          "text": "Overnight research COMPLETE — comprehensive 23KB profile created at workspace/research/katrina-schleisman-profile.md"
+        },
+        {
+          "date": "2026-03-08",
+          "text": "DELIVERABLES: Full bio + education, publications (episodic/semantic memory integration paper 2024), recent talks (AI and Self QuEST talk, Thoughtforms podcast with Levin), thought leadership (AGI neuroscience critique), 15 discussion questions, Levin convergence bridges."
+        },
+        {
+          "date": "2026-03-08",
+          "text": "KEY EXPERTISE: Neural basis of memory, biologically-inspired AI, episodic/semantic memory systems, consciousness/self-concept in AI, human-AI teaming."
+        },
+        {
+          "date": "2026-03-08",
+          "text": "AFFILIATION: Principal Scientist at Galois, Inc. (Minneapolis). Cognitive neuroscientist (PhD University of Minnesota)."
+        },
+        {
+          "date": "2026-03-08",
+          "text": "PODCAST GOLD: Already appeared on Thoughtforms podcast with Michael Levin (Dec 2025) — familiarity established. Topics: Platonic patterns, memory fractals, perspectival worlds, emergence."
+        }
+      ],
+      "completed": "2026-03-08"
+    },
+    {
       "id": "kanban-board",
       "title": "Kanban Board for Backlog",
       "description": "Built static Kanban board hosted on GitHub Pages to track discussed-but-not-acted-on items. Includes links and conversation notes.",
-      "tags": ["tooling", "milestone"],
+      "tags": [
+        "tooling",
+        "milestone"
+      ],
       "added": "2026-03-05",
       "completed": "2026-03-05",
       "link": "https://ianpilon.github.io/ren-ian-backlog/",
       "links": [
-        {"label": "Live Board", "url": "https://ianpilon.github.io/ren-ian-backlog/"},
-        {"label": "GitHub Repo", "url": "https://github.com/ianpilon/ren-ian-backlog"}
+        {
+          "label": "Live Board",
+          "url": "https://ianpilon.github.io/ren-ian-backlog/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/ianpilon/ren-ian-backlog"
+        }
       ],
       "notes": [
-        {"date": "2026-03-05", "text": "Ian requested after system crash — wanted a way to track things we discussed but haven't acted on yet, so nothing gets lost."},
-        {"date": "2026-03-05", "text": "Built with vanilla HTML/CSS/JS, loads from tasks.json, hosted on GitHub Pages. Auto-refreshes every 5 min."}
+        {
+          "date": "2026-03-05",
+          "text": "Ian requested after system crash — wanted a way to track things we discussed but haven't acted on yet, so nothing gets lost."
+        },
+        {
+          "date": "2026-03-05",
+          "text": "Built with vanilla HTML/CSS/JS, loads from tasks.json, hosted on GitHub Pages. Auto-refreshes every 5 min."
+        }
       ]
     },
     {
       "id": "ontario-mou-research",
       "title": "Ontario MOU Research",
       "description": "Comprehensive brief on MOUs for venture studio. Non-binding but courts look at substance. Template included.",
-      "tags": ["venture-studio", "legal"],
+      "tags": [
+        "venture-studio",
+        "legal"
+      ],
       "added": "2026-03-02",
       "completed": "2026-03-03",
       "notes": [
-        {"date": "2026-03-03", "text": "Overnight elves completed. Brief at research/ontario-mou-venture-studio-brief.md"}
+        {
+          "date": "2026-03-03",
+          "text": "Overnight elves completed. Brief at research/ontario-mou-venture-studio-brief.md"
+        }
       ]
     },
     {
       "id": "qmd-research",
       "title": "QMD Deep Dive",
       "description": "Research on tobi/qmd — Shopify founder's local hybrid search engine",
-      "tags": ["research", "openorca"],
+      "tags": [
+        "research",
+        "openorca"
+      ],
       "added": "2026-03-02",
       "completed": "2026-03-03",
       "link": "https://github.com/tobi/qmd",
       "notes": [
-        {"date": "2026-03-03", "text": "Overnight elves completed. Deep dive at research/qmd-deep-dive.md"}
+        {
+          "date": "2026-03-03",
+          "text": "Overnight elves completed. Deep dive at research/qmd-deep-dive.md"
+        }
       ]
     },
     {
       "id": "vapi-setup",
       "title": "Vapi Account & Voice-Ren",
       "description": "Created Vapi account, Voice-Ren assistant with phone number +1 (858) 564-4347, tool server for workspace access",
-      "tags": ["voice", "milestone"],
+      "tags": [
+        "voice",
+        "milestone"
+      ],
       "added": "2026-03-02",
       "completed": "2026-03-02",
       "links": [
-        {"label": "Vapi Dashboard", "url": "https://dashboard.vapi.ai/"}
+        {
+          "label": "Vapi Dashboard",
+          "url": "https://dashboard.vapi.ai/"
+        }
       ],
       "notes": [
-        {"date": "2026-03-02", "text": "Voice latency was 3-10 seconds with Twilio setup. Vapi gets it down to ~1150ms."},
-        {"date": "2026-03-02", "text": "Created Voice-Ren assistant with Claude Sonnet, built tool server at vapi-tools/server.js for workspace access."},
-        {"date": "2026-03-02", "text": "Voice-Ren successfully pushed to GitHub via voice command — milestone!"}
+        {
+          "date": "2026-03-02",
+          "text": "Voice latency was 3-10 seconds with Twilio setup. Vapi gets it down to ~1150ms."
+        },
+        {
+          "date": "2026-03-02",
+          "text": "Created Voice-Ren assistant with Claude Sonnet, built tool server at vapi-tools/server.js for workspace access."
+        },
+        {
+          "date": "2026-03-02",
+          "text": "Voice-Ren successfully pushed to GitHub via voice command — milestone!"
+        }
       ]
     },
     {
       "id": "memory-graph",
       "title": "Memory Graph Visualization",
       "description": "Visualized memory as knowledge graph using GitNexus + md-to-js converter. 59 nodes, 502 edges.",
-      "tags": ["memory", "milestone"],
+      "tags": [
+        "memory",
+        "milestone"
+      ],
       "added": "2026-03-02",
       "completed": "2026-03-02",
       "links": [
-        {"label": "GitNexus", "url": "https://gitnexus.vercel.app"}
+        {
+          "label": "GitNexus",
+          "url": "https://gitnexus.vercel.app"
+        }
       ],
       "notes": [
-        {"date": "2026-03-02", "text": "GitNexus is built for code (imports/function calls), not markdown. Created tools/md-to-js.js converter to transform .md files into .js modules with require() calls."},
-        {"date": "2026-03-02", "text": "Result: 59 nodes, 502 edges — my brain visualized as a neural network. Reusable pattern for any document format."}
+        {
+          "date": "2026-03-02",
+          "text": "GitNexus is built for code (imports/function calls), not markdown. Created tools/md-to-js.js converter to transform .md files into .js modules with require() calls."
+        },
+        {
+          "date": "2026-03-02",
+          "text": "Result: 59 nodes, 502 edges — my brain visualized as a neural network. Reusable pattern for any document format."
+        }
       ]
     }
   ]
