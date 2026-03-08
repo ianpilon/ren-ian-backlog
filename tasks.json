@@ -149,6 +149,24 @@
       ]
     },
     {
+      "id": "visual-explainer",
+      "title": "Visual Explainer: HTML Diagrams & Slides for Agents",
+      "description": "Agent skill that turns complex output into styled HTML pages. Mermaid diagrams, CSS Grid architecture views, Chart.js dashboards, slide decks. No ASCII art — real typography, dark/light themes, interactive zoom/pan.",
+      "priority": "medium",
+      "tags": ["tool", "visualization", "skill", "documentation"],
+      "added": "2026-03-08",
+      "link": "https://github.com/nicobailon/visual-explainer",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/nicobailon/visual-explainer"}
+      ],
+      "notes": [
+        {"date": "2026-03-08", "text": "USE THIS TO BUILD REN ARCHITECTURE DIAGRAM (homework tonight)."},
+        {"date": "2026-03-08", "text": "COMMANDS: /generate-web-diagram, /generate-visual-plan, /generate-slides, /diff-review, /plan-review, /project-recap."},
+        {"date": "2026-03-08", "text": "OUTPUT: Self-contained HTML files with Mermaid, Chart.js, CSS Grid. Opens in browser."},
+        {"date": "2026-03-08", "text": "APPROACH: Reference templates + CSS patterns + library references → agent generates styled HTML."}
+      ]
+    },
+    {
       "id": "openai-symphony",
       "title": "Symphony: OpenAI's Autonomous Work Orchestrator",
       "description": "Turns project work into isolated, autonomous implementation runs. Monitors Linear board → spawns agents → agents complete tasks with proof of work (CI, PR review, walkthrough videos) → land PRs safely. Engineers manage work, not agents.",
