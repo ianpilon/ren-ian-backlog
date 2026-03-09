@@ -149,6 +149,27 @@
       ]
     },
     {
+      "id": "autoresearch",
+      "title": "Autoresearch: Karpathy's Autonomous AI Research Agents",
+      "description": "AI agents running research autonomously overnight. Modify code → train 5 min → evaluate → keep/discard → repeat. 'You're not editing Python, you're programming the program.md' — meta-level agent programming.",
+      "priority": "high",
+      "tags": ["research", "karpathy", "autonomous-agents", "meta-programming", "openorca"],
+      "added": "2026-03-08",
+      "link": "https://github.com/karpathy/autoresearch",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/karpathy/autoresearch"},
+        {"label": "Tweet Context", "url": "https://x.com/karpathy/status/2029701092347630069"}
+      ],
+      "notes": [
+        {"date": "2026-03-08", "text": "KEY INSIGHT: 'You're not touching any Python files. Instead, you are programming the program.md Markdown files that provide context to AI agents.'"},
+        {"date": "2026-03-08", "text": "WORKFLOW: Agent modifies train.py → runs 5 min fixed budget → measures val_bpb → keeps or discards → repeats. ~12 experiments/hour, ~100 overnight."},
+        {"date": "2026-03-08", "text": "DESIGN: Single file to modify (train.py), fixed time budget (comparable results), self-contained (one GPU, one file, one metric)."},
+        {"date": "2026-03-08", "text": "META: 'Iterate on program.md to find the research org code that achieves fastest research progress, add more agents to the mix.'"},
+        {"date": "2026-03-08", "text": "PHILOSOPHY: 'Research is now entirely the domain of autonomous swarms of AI agents... no one could tell if that's right or wrong as the code has grown beyond human comprehension.'"},
+        {"date": "2026-03-08", "text": "OPENORCA RELEVANCE: Meta-programming pattern — agents edit/iterate, humans program the agent instructions. Elves system is similar concept."}
+      ]
+    },
+    {
       "id": "deer-flow",
       "title": "DeerFlow: ByteDance's SuperAgent Harness",
       "description": "Open-source super agent harness that orchestrates sub-agents, memory, and sandboxes. Skills-based extensibility, MCP server support, IM channels (Telegram/Slack/Feishu), Docker/K8s sandbox execution.",
