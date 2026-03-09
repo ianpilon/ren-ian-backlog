@@ -149,6 +149,30 @@
       ]
     },
     {
+      "id": "deer-flow",
+      "title": "DeerFlow: ByteDance's SuperAgent Harness",
+      "description": "Open-source super agent harness that orchestrates sub-agents, memory, and sandboxes. Skills-based extensibility, MCP server support, IM channels (Telegram/Slack/Feishu), Docker/K8s sandbox execution.",
+      "priority": "high",
+      "tags": ["openorca", "orchestration", "bytedance", "research", "reference-architecture"],
+      "added": "2026-03-08",
+      "link": "https://github.com/bytedance/deer-flow",
+      "links": [
+        {"label": "GitHub Repo", "url": "https://github.com/bytedance/deer-flow"},
+        {"label": "Website", "url": "https://deerflow.tech/"},
+        {"label": "MCP Server Guide", "url": "https://github.com/bytedance/deer-flow/blob/main/backend/docs/MCP_SERVER.md"}
+      ],
+      "notes": [
+        {"date": "2026-03-08", "text": "DIRECTLY RELEVANT TO OPENORCA — ByteDance's vision for agent orchestration."},
+        {"date": "2026-03-08", "text": "#1 on GitHub Trending Feb 28, 2026. Ground-up rewrite for v2.0."},
+        {"date": "2026-03-08", "text": "CORE FEATURES: Sub-agents, sandbox execution (Docker/K8s), long-term memory, context engineering, skills & tools."},
+        {"date": "2026-03-08", "text": "IM CHANNELS: Telegram (Bot API), Slack (Socket Mode), Feishu/Lark (WebSocket) — no public IP required."},
+        {"date": "2026-03-08", "text": "MCP SERVER: Configurable MCP servers with OAuth token flows (client_credentials, refresh_token)."},
+        {"date": "2026-03-08", "text": "SANDBOX MODES: Local, Docker isolated, Docker + Kubernetes (via provisioner service)."},
+        {"date": "2026-03-08", "text": "CONTEXT ENGINEERING: thinking_enabled, plan_mode, subagent_enabled settings per session."},
+        {"date": "2026-03-08", "text": "COMPARE TO: Symphony (OpenAI) focuses on work management, DeerFlow focuses on execution harness."}
+      ]
+    },
+    {
       "id": "visual-explainer",
       "title": "Visual Explainer: HTML Diagrams & Slides for Agents",
       "description": "Agent skill that turns complex output into styled HTML pages. Mermaid diagrams, CSS Grid architecture views, Chart.js dashboards, slide decks. No ASCII art — real typography, dark/light themes, interactive zoom/pan.",
