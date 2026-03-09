@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2026-03-08T08:05:52-05:00",
+  "lastUpdated": "2026-03-09T19:48:00-04:00",
   "backlog": [
+    {
+      "id": "openorca-demo-video",
+      "title": "OpenOrca Demo Video: 'Claw Orchestrator'",
+      "description": "Product demo video showcasing Claw Orchestrator as the command center for AI agent fleets. Script complete — needs production (recording, visuals, editing).",
+      "priority": "high",
+      "tags": ["openorca", "video", "marketing", "demo"],
+      "added": "2026-03-09",
+      "notes": [
+        {"date": "2026-03-09", "text": "HOOK: 'You wanted autonomy. You got chaos.' — Multiple agents running in silos, you as the bottleneck."},
+        {"date": "2026-03-09", "text": "PAIN POINTS: What's Agent-3 stuck on? Did email agent respond to Sarah? Why is coding agent burning credits? Which one needs approval?"},
+        {"date": "2026-03-09", "text": "PROBLEM: Agents stop and wait when they need passwords, money, or judgment calls. You don't know they're stuck until you check."},
+        {"date": "2026-03-09", "text": "SOLUTION: Real-time agent grid — who's active, idle, blocked. One-click intervention requests. Swarm coordination visible."},
+        {"date": "2026-03-09", "text": "KEY DEMO: Intervention popup 'Need $15 to complete research task — approve?' → Click → Agent resumes. No context lost."},
+        {"date": "2026-03-09", "text": "SWARM SHOT: Research Agent finds leads → Email Agent drafts outreach → Calendar Agent books meetings. All visible, all coordinated."},
+        {"date": "2026-03-09", "text": "TIMELINE: Action log scrolling — '9:47am Research Agent queried Crunchbase. 10:15am Email Agent drafted 3 variants. 10:22am You approved send.'"},
+        {"date": "2026-03-09", "text": "CLOSER: 'Swarm objective complete. 47 actions. 2 interventions. 0 context lost.'"},
+        {"date": "2026-03-09", "text": "TAGLINE: 'Claw Orchestrator. Run your agents. Unblock them instantly. Accomplish things together.'"},
+        {"date": "2026-03-09", "text": "PRODUCTION NEEDS: Screen recordings of UI, terminal windows, notification popups, direct-to-camera talking head shots."}
+      ]
+    },
     {
       "id": "openclaw-cron-reliability",
       "title": "OpenClaw Cron Jobs: Reliability Guide (@AgentMcClaw)",
